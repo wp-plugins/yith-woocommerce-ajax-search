@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Ajax Search
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 if ( !defined( 'YITH_WCAS' ) ) { exit; } // Exit if accessed directly
@@ -22,7 +22,7 @@ if( !class_exists( 'YITH_WCAS' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.0.0';
+        public $version = '1.1.0';
         
         /**
          * Plugin object
@@ -79,7 +79,9 @@ if( !class_exists( 'YITH_WCAS' ) ) {
         public function add_woo_ajax_search_shortcode( $args = array() ) {
             $args = shortcode_atts( array(), $args );
 
-            woocommerce_get_template( 'yith-woocommerce-ajax-search.php', $args, '', YITH_WCAS_DIR . 'templates/' );
+            $wc_get_template = function_exists('wc_get_template') ? 'wc_get_template' : 'woocommerce_get_template';
+
+            $wc_get_template( 'yith-woocommerce-ajax-search.php', $args, '', YITH_WCAS_DIR . 'templates/' );
         }
 
         /**

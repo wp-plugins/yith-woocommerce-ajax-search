@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Ajax Search
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 if ( !defined( 'YITH_WCAS' ) ) { exit; } // Exit if accessed directly
@@ -76,7 +76,7 @@ if( !class_exists( 'YITH_WCAS_Admin' ) ) {
 
 
             //Filters
-            add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_tab_woocommerce' ) );
+            add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_tab_woocommerce' ), 30 );
             //add_filter( 'woocommerce_catalog_settings', array( $this, 'add_catalog_image_size' ) );
 
             //Apply filters
