@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Ajax Search
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 if ( !defined( 'YITH_WCAS' ) ) { exit; } // Exit if accessed directly
@@ -379,7 +379,17 @@ if( !class_exists( 'YITH_WCAS_Admin' ) ) {
          * @since 1.0.0
          */
         public function admin_update_option($value) {
-            update_option( $value['id'], woocommerce_clean($_POST[$value['id']]) );
+
+            global $woocommerce;
+
+            if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
+                $wc_clean = 'woocommerce_clean';
+            }
+            else {
+                $wc_clean = 'wc_clean';
+                }
+
+            update_option( $value['id'], $wc_clean($_POST[$value['id']]) );
         }
 
 		/**
@@ -426,8 +436,17 @@ if( !class_exists( 'YITH_WCAS_Admin' ) ) {
          */
         public function action_links( $links ) {
 
+            global $woocommerce;
+
+            if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
+                $wc_clean = 'woocommerce_settings';
+            }
+            else {
+                $wc_clean = 'wc-settings';
+            }
+
             $plugin_links = array(
-                '<a href="' . admin_url( 'admin.php?page=woocommerce_settings&tab=yith_wcas' ) . '">' . __( 'Settings', 'yit' ) . '</a>',
+                '<a href="' . admin_url( 'admin.php?page=' . $wc_clean . '&tab=yith_wcas' ) . '">' . __( 'Settings', 'yit' ) . '</a>',
                 '<a href="' . $this->doc_url . '">' . __( 'Docs', 'yit' ) . '</a>',
             );
 

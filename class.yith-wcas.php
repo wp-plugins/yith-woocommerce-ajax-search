@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Ajax Search
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 if ( !defined( 'YITH_WCAS' ) ) { exit; } // Exit if accessed directly
@@ -22,7 +22,7 @@ if( !class_exists( 'YITH_WCAS' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.0';
+        public $version = '1.1.1';
         
         /**
          * Plugin object
