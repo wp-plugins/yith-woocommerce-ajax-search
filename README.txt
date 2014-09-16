@@ -3,13 +3,13 @@
 Contributors: yithemes
 Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
-Tested up to: 3.8.1
-Stable tag: 1.1.1
+Tested up to: 4.0
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Ajax Search allows your users to search products in real time.
-WooCommerce 2.1.x Compatible. 
+WooCommerce 2.2.x Compatible.
 
 == Description ==
 
@@ -72,6 +72,12 @@ In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of t
 2. The Ajax Search settings page
 
 == Changelog ==
+
+= 1.1.2 =
+
+* Fixed: Prevent undefined title index if the widget is called by the the_widget func
+* Updated: Autocomplete js library
+* Updated: Plugin Core Framework
 
 = 1.1.1 =
 

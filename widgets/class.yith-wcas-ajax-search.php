@@ -50,7 +50,7 @@ if( !class_exists( 'YITH_WCAS_Ajax_Search_Widget' ) ) {
         function widget( $args, $instance ) {
             extract($args);
 
-            $title = $instance['title'];
+            $title = isset( $instance['title'] ) ? $instance['title'] : '';
             $title = apply_filters('widget_title', $title, $instance, $this->id_base);
 
             echo $before_widget;

@@ -22,7 +22,7 @@ if( !class_exists( 'YITH_WCAS' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.1';
+        public $version = '1.1.2';
         
         /**
          * Plugin object
@@ -102,6 +102,7 @@ if( !class_exists( 'YITH_WCAS' ) ) {
             global $woocommerce;
 
             $search_keyword = esc_attr($_REQUEST['query']);
+
             $ordering_args = $woocommerce->query->get_catalog_ordering_args( 'title', 'asc' );
             $products = array();
 
@@ -121,6 +122,17 @@ if( !class_exists( 'YITH_WCAS' ) ) {
                     )
                 )
             );
+
+            if( isset( $_REQUEST['product_cat']) ){
+                $args['tax_query'] = array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'product_cat',
+                        'field' => 'slug',
+                        'terms' => $_REQUEST['product_cat']
+                    ));
+            }
+
             $products_query = new WP_Query( $args );
 
             if ( $products_query->have_posts() ) {
