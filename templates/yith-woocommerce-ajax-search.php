@@ -11,38 +11,25 @@ if ( !defined( 'YITH_WCAS' ) ) { exit; } // Exit if accessed directly
 
 
 wp_enqueue_script('yith_wcas_jquery-autocomplete' );
+wp_enqueue_script('yith_wcas_frontend' );
 
 ?>
 
 <div class="yith-ajaxsearchform-container">
-<form role="search" method="get" id="yith-ajaxsearchform" action="<?php echo esc_url( home_url( '/'  ) ) ?>">
-    <div>
-        <label class="screen-reader-text" for="yith-s"><?php _e( 'Search for:', 'yit' ) ?></label>
-        <input type="search" value="<?php echo get_search_query() ?>" name="s" id="yith-s" placeholder="<?php echo get_option('yith_wcas_search_input_label') ?>" />
-        <input type="submit" id="yith-searchsubmit" value="<?php echo get_option('yith_wcas_search_submit_label') ?>" />
-        <input type="hidden" name="post_type" value="product" />
-    </div>
-</form>
-</div>
-<script type="text/javascript">
-jQuery(function($){
-    var search_loader_url = <?php echo apply_filters('yith_wcas_ajax_search_icon', 'woocommerce_params.ajax_loader_url') ?>;
+    <form role="search" method="get" id="yith-ajaxsearchform" action="<?php echo esc_url( home_url( '/'  ) ) ?>">
+        <div>
+            <label class="screen-reader-text" for="yith-s"><?php _e( 'Search for:', 'yit' ) ?></label>
 
-    $('#yith-s').autocomplete({
-        minChars: <?php echo get_option('yith_wcas_min_chars') * 1; ?>,
-        appendTo: '.yith-ajaxsearchform-container',
-        serviceUrl: woocommerce_params.ajax_url + '?action=yith_ajax_search_products',
-        onSearchStart: function(){
-            $(this).css('background', 'url('+search_loader_url+') no-repeat right center');
-        },
-        onSearchComplete: function(){
-            $(this).css('background', 'transparent');
-        },
-        onSelect: function (suggestion) {
-            if( suggestion.id != -1 ) {
-                window.location.href = suggestion.url;
-            }
-        }
-    });
-});
-</script>
+            <input type="search"
+                   value="<?php echo get_search_query() ?>"
+                   name="s"
+                   id="yith-s"
+                   placeholder="<?php echo get_option('yith_wcas_search_input_label') ?>"
+                   data-loader-icon="<?php echo str_replace( '"', '', apply_filters('yith_wcas_ajax_search_icon', '') ) ?>"
+                   data-min-chars="<?php echo get_option('yith_wcas_min_chars'); ?>" />
+
+            <input type="submit" id="yith-searchsubmit" value="<?php echo get_option('yith_wcas_search_submit_label') ?>" />
+            <input type="hidden" name="post_type" value="product" />
+        </div>
+    </form>
+</div>

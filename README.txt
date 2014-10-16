@@ -73,6 +73,10 @@ In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of t
 
 == Changelog ==
 
+= 1.1.3 =
+
+Fixed: Javascript code in external file
+
 = 1.1.2 =
 
 * Fixed: Prevent undefined title index if the widget is called by the the_widget func

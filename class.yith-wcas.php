@@ -22,7 +22,7 @@ if( !class_exists( 'YITH_WCAS' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.2';
+        public $version = '1.1.3';
         
         /**
          * Plugin object
@@ -104,7 +104,7 @@ if( !class_exists( 'YITH_WCAS' ) ) {
             $search_keyword = esc_attr($_REQUEST['query']);
 
             $ordering_args = $woocommerce->query->get_catalog_ordering_args( 'title', 'asc' );
-            $products = array();
+            $suggestions = array();
 
             $args = array(
                 's'                     => apply_filters('yith_wcas_ajax_search_products_search_query', $search_keyword),
@@ -133,34 +133,34 @@ if( !class_exists( 'YITH_WCAS' ) ) {
                     ));
             }
 
-            $products_query = new WP_Query( $args );
+            $products = get_posts( $args );
 
-            if ( $products_query->have_posts() ) {
-                while ( $products_query->have_posts() ) {
-                    $products_query->the_post();
+            if ( ! empty( $products ) ) {
+                foreach ( $products as $post ) {
+                    $product = wc_get_product( $post );
 
-                    $products[] = array(
-                        'id' => get_the_ID(),
-                        'value' => get_the_title(),
-                        'url' => get_permalink()
-                    );
+                    $suggestions[] = apply_filters( 'yith_wcas_suggestion', array(
+                        'id'    => $product->id,
+                        'value' => $product->get_title(),
+                        'url'   => $product->get_permalink()
+                    ), $product );
                 }
             } else {
-                $products[] = array(
+                $suggestions[] = array(
                     'id' => -1,
                     'value' => __('No results', 'yit'),
-                    'url' => ''
+                    'url' => '',
                 );
             }
             wp_reset_postdata();
 
 
-            $products = array(
-                'suggestions' => $products
+            $suggestions = array(
+                'suggestions' => $suggestions
             );
 
 
-            echo json_encode( $products );
+            echo json_encode( $suggestions );
             die();
         }
 	}
