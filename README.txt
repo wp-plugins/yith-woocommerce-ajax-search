@@ -3,7 +3,7 @@
 Contributors: yithemes
 Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
