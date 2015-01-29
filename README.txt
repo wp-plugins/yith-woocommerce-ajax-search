@@ -1,7 +1,7 @@
 === YITH WooCommerce Ajax Search ===
 
 Contributors: yithemes
-Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop
+Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop, yith, ajax search, instant search, premium, yithemes
 Requires at least: 3.5.1
 Tested up to: 4.1
 Stable tag: 1.2
@@ -74,11 +74,12 @@ In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of t
 == Changelog ==
 
 = 1.2 =
+
 * Updated: Plugin Core Framework
 
 = 1.1.3 =
 
-Fixed: Javascript code in external file
+* Fixed: Javascript code in external file
 
 = 1.1.2 =
 

@@ -2,7 +2,7 @@
 /**
  * Frontend class
  *
- * @author Your Inspiration Themes
+ * @author Yithemes
  * @package YITH WooCommerce Ajax Search
  * @version 1.1.1
  */

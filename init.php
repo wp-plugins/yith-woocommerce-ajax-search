@@ -3,13 +3,13 @@
 * Plugin Name: YITH WooCommerce Ajax Search
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Ajax Search allows your users to search products in real time.
-* Version: 1.1.3
-* Author: Your Inspiration Themes
+* Version: 1.2
+* Author: Yithemes
 * Author URI: http://yithemes.com/
 * Text Domain: yit
 * Domain Path: /languages/
-* 
-* @author Your Inspiration Themes
+*
+* @author Yithemes
 * @package YITH WooCommerce Ajax Search
 * @version 1.1.1
 */
@@ -30,22 +30,85 @@
 */
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-function yith_ajax_search_constructor() {
-    global $woocommerce;
-    if ( ! isset( $woocommerce ) ) return;
 
-    /**
-     * Required functions
-     */
-    if( !defined('YITH_FUNCTIONS') ) {
-        require_once( 'yit-common/yit-functions.php' );
+if ( !function_exists( 'WC' ) ) {
+    function yith_wcas_install_woocommerce_admin_notice() {
+        ?>
+        <div class="error">
+            <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
+        </div>
+    <?php
     }
 
-    load_plugin_textdomain( 'yit', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
+    add_action( 'admin_notices', 'yith_wcas_install_woocommerce_admin_notice' );
+    return;
+}
 
+if ( defined( 'YITH_WCAS_PREMIUM' ) ) {
+    function yith_wcas_install_free_admin_notice() {
+        ?>
+        <div class="error">
+            <p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Ajax Search while you are using the premium one.', 'yit' ); ?></p>
+        </div>
+    <?php
+    }
+
+    add_action( 'admin_notices', 'yith_wcas_install_free_admin_notice' );
+
+    deactivate_plugins( plugin_basename( __FILE__ ) );
+    return;
+}
+
+if ( !function_exists( 'yith_plugin_registration_hook' ) ) {
+    require_once 'plugin-fw/yit-plugin-registration-hook.php';
+}
+
+register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
+
+
+
+if ( defined( 'YITH_WCAS_VERSION' ) ){
+    return;
+}else{
+    define( 'YITH_WCAS_VERSION', '1.2' );
+}
+
+if ( ! defined( 'YITH_WCAS_FREE_INIT' ) ) {
+    define( 'YITH_WCAS_FREE_INIT', plugin_basename( __FILE__ ) );
+}
+
+if ( ! defined( 'YITH_WCAS' ) ) {
     define( 'YITH_WCAS', true );
+}
+
+if ( ! defined( 'YITH_WCAS_FILE' ) ) {
+    define( 'YITH_WCAS_FILE', __FILE__ );
+}
+
+if ( ! defined( 'YITH_WCAS_URL' ) ) {
     define( 'YITH_WCAS_URL', plugin_dir_url( __FILE__ ) );
-    define( 'YITH_WCAS_DIR', plugin_dir_path( __FILE__ ) );
+}
+
+if ( ! defined( 'YITH_WCAS_DIR' ) ) {
+    define( 'YITH_WCAS_DIR', plugin_dir_path( __FILE__ )  );
+}
+
+if ( ! defined( 'YITH_WCAS_TEMPLATE_PATH' ) ) {
+    define( 'YITH_WCAS_TEMPLATE_PATH', YITH_WCAS_DIR . 'templates' );
+}
+
+if ( ! defined( 'YITH_WCAS_ASSETS_URL' ) ) {
+    define( 'YITH_WCAS_ASSETS_URL', YITH_WCAS_URL . 'assets' );
+}
+
+if ( ! defined( 'YITH_WCAS_ASSETS_IMAGES_URL' ) ) {
+    define( 'YITH_WCAS_ASSETS_IMAGES_URL', YITH_WCAS_ASSETS_URL . '/images/' );
+}
+
+
+function yith_ajax_search_constructor() {
+
+    load_plugin_textdomain( 'yit', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
 
     // Load required classes and functions
     require_once('functions.yith-wcas.php');
