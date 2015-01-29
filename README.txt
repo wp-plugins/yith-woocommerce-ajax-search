@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.1.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ Working demo is available here:
 **[LIVE DEMO](http://preview.yithemes.com/sistina/)**
 
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_ajax_search/).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search/).
 
 
 = Installation =
@@ -41,7 +41,7 @@ YITH WooCommerce Ajax Search will add a new tab called "Ajax Search" below the W
 
 = Developer =
 
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_ajax_search/) and discover how to do that.
+Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search/) and discover how to do that.
 
 = Support =
 
@@ -72,6 +72,9 @@ In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of t
 2. The Ajax Search settings page
 
 == Changelog ==
+
+= 1.2 =
+* Updated: Plugin Core Framework
 
 = 1.1.3 =
 
@@ -110,7 +113,7 @@ If you have created your own language pack, or have an update for an existing on
 
 == Documentation ==
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_ajax_search/).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search/).
 
 == Upgrade notice ==
 
