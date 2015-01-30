@@ -36,8 +36,7 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woo
 Once you have installed the plugin, you just need to activate the plugin in order to enable it.
 
 = Configuration =
-
-YITH WooCommerce Ajax Search will add a new tab called "Ajax Search" below the Woocommerce -> Settings menu. Here you are able to configure all the plugin settings.
+YITH WooCommerce Ajax Search will add a new submenu called "Cart Messages" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
 
 = Developer =
 
@@ -45,7 +44,6 @@ Are you a developer? Want to customize the templates or the style of the plugin?
 
 = Support =
 
-Hi there, we have good news here: all our plugins are released for free. Wow!
 Already knew it, right?! Great, but maybe you do not know that: if you're looking for how to install the plugins or how to use them within your Wordpress installations, which is the right way to ask support?
 That's the way:
 
