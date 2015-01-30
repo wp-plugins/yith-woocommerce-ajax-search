@@ -187,7 +187,7 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
          */
         protected function _upgrader_pre_download( $reply, $package, $upgrader ) {
 
-            $plugin_info = YIT_Plugin_Licence()->get_plugin( $upgrader->skin->plugin );
+            $plugin_info = YIT_Plugin_Licence()->get_product( $upgrader->skin->plugin );
 
             /**
              * False ? It isn't YITH Premium plugins, please wordpress update it for me!
