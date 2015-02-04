@@ -109,6 +109,7 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
          */
         function __construct( $id = '' ) {
             $this->id = $id;
+
         }
 
 
@@ -131,7 +132,7 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
 
             add_action( 'add_meta_boxes', array( $this, 'register_metabox' ) );
             add_action( 'save_post', array( $this, 'save_postdata' ) );
-            add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+            add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ), 15 );
 
         }
 
@@ -155,6 +156,11 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
             wp_enqueue_script( 'jquery-chosen', YIT_CORE_PLUGIN_URL . '/assets/js/chosen/chosen.jquery.js', array( 'jquery' ), '1.1.0', true );
             wp_enqueue_script( 'yit-metabox', YIT_CORE_PLUGIN_URL . '/assets/js/metabox.js', array( 'jquery', 'wp-color-picker' ), '1.0.0', true );
             wp_enqueue_style( 'jquery-ui-overcast', YIT_CORE_PLUGIN_URL . '/assets/css/overcast/jquery-ui-1.8.9.custom.css', false, '1.8.9', 'all' );
+
+            if( function_exists( 'WC' ) ){
+                wp_enqueue_script( 'woocommerce_admin' );
+                wp_enqueue_script('ajax-chosen');
+            }
         }
 
         /**
