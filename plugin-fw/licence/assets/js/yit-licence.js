@@ -65,8 +65,7 @@
                         if (true == response.activated) {
                             $('.product-licence-activation').empty().replaceWith(response.template);
                             licence_api();
-                        } else if (false != response) { console.log( response.error );
-                            //message.text(response.additional_info);
+                        } else if (false != response) {
                             message.text(response.error);
                             message_wrapper.addClass('visible');
                             product_row.addClass('error');

@@ -254,7 +254,8 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
          * @internal fire two action (before and after update): yit_panel_wc_before_update and yit_panel_wc_after_update
          */
         public function woocommerce_update_options() {
-            if ( isset( $_POST['yit_panel_wc_options_nonce'] ) && wp_verify_nonce( $_POST['yit_panel_wc_options_nonce'], 'yit_panel_wc_options' ) ) {
+
+            if ( isset( $_POST['yit_panel_wc_options_nonce'] ) && wp_verify_nonce( $_POST['yit_panel_wc_options_nonce'], 'yit_panel_wc_options_'.$this->settings['page'] ) ) {
 
                 do_action( 'yit_panel_wc_before_update' );
 
@@ -289,10 +290,13 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
         public function admin_enqueue_scripts() { 
             global $woocommerce;
 
+            wp_enqueue_style( 'raleway-font', '//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,100,200,300,900' );
+
             wp_enqueue_media();
             wp_enqueue_style( 'woocommerce_admin_styles', $woocommerce->plugin_url() . '/assets/css/admin.css', array(), $woocommerce->version );
             wp_enqueue_style( 'yit-plugin-style', YIT_CORE_PLUGIN_URL . '/assets/css/yit-plugin-panel.css', $woocommerce->version );
             wp_enqueue_style ( 'wp-jquery-ui-dialog' );
+
 
             wp_enqueue_style( 'jquery-chosen', YIT_CORE_PLUGIN_URL . '/assets/css/chosen/chosen.css' );
             wp_enqueue_script( 'jquery-chosen', YIT_CORE_PLUGIN_URL . '/assets/js/chosen/chosen.jquery.js', array( 'jquery' ), '1.1.0', true );
