@@ -70,7 +70,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 if ( defined( 'YITH_WCAS_VERSION' ) ){
     return;
 }else{
-    define( 'YITH_WCAS_VERSION', '1.2' );
+    define( 'YITH_WCAS_VERSION', '1.2.1' );
 }
 
 if ( ! defined( 'YITH_WCAS_FREE_INIT' ) ) {

@@ -283,14 +283,16 @@
             <div class="col-2">
                 <div class="section-title">
                     <ul>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-five.png" alt="5"/><span>Activate the category search</span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-six.png" alt="6"/><span>Configure the <b>tag</b> search</span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-seven.png" alt="7"/><span>Search a product with an <b>ID</b></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-five.png" alt="5"/><span>Extend the research in the excerpt and in the content</li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-six.png" alt="6"/><span>Activate the category search</span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-seven.png" alt="7"/><span>Configure the <b>tag</b> search</span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-eight.png" alt="8"/><span>Search a product with an <b>ID</b></span></li>
+
                     </ul>
                 </div>
             </div>
             <div class="col-1">
-                <img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>02.jpg" alt="02" />
+                <img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>02.png" alt="02" />
             </div>
         </div>
     </div>

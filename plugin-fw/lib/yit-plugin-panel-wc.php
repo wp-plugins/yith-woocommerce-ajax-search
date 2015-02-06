@@ -63,11 +63,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 add_action( 'admin_bar_menu', array( $this, 'add_admin_bar_menu' ), 100 );
                 add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
                 add_action( 'admin_init', array( $this, 'woocommerce_update_options' ) );
+
                 add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'yit_boxinfo' ), 10, 1 );
                 add_action( 'woocommerce_admin_field_videobox', array( $this, 'yit_videobox' ), 10, 1 );
-
-                add_action( 'woocommerce_admin_field_upload', array( $this, 'yit_upload' ), 10, 1 );
-                add_action( 'woocommerce_update_option_upload', array( $this, 'yit_upload_update' ), 10, 1 );
 
             }
         }
@@ -151,8 +149,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
          */
 
         public function yit_upload( $args = array() ) {
-
-            if ( !empty( $args ) ) {
+            if ( ! empty( $args ) ) {
                 $args['value'] = ( get_option($args['id'])) ? get_option($args['id']) : $args['default'];
                 extract( $args );
 

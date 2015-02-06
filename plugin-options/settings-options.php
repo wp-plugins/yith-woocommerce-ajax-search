@@ -17,20 +17,23 @@ return array(
 
 	'settings' => array(
 
+
+
         'section_general_settings_videobox'         => array(
           'name' => __( 'Upgrade to the PREMIUM VERSION', 'yit' ),
           'type' => 'videobox',
           'default' => array(
               'plugin_name'        => __( 'YITH WooCommerce Ajax Search', 'yit' ),
-              'title_first_column' => __( 'Discovery the Advanced Features', 'yit' ),
+              'title_first_column' => __( 'Discover the Advanced Features', 'yit' ),
               'description_first_column' => __('Upgrade to the PREMIUM VERSION
 of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yit'),
-              'image' => array(
-                  'image_url'    => YITH_WCAS_ASSETS_IMAGES_URL.'03.jpg',
-                  'image_link'    => 'http://yithemes.com/themes/plugins/yith-woocommerce-ajax-search/',
+              'video' => array(
+                  'video_id'           => '118917627',
+                  'video_image_url'    =>  YITH_WCAS_ASSETS_IMAGES_URL.'ajax-search-premium.jpg',
+                  'video_description'  => __( 'YITH WooCommerce Ajax Search', 'yit' ),
               ),
               'title_second_column' => __( 'Get Support and Pro Features', 'yit' ),
-              'description_second_column' => __('Purchasing the premium version of the plugin, you will take advantage of the advanced features of the product and you will get one year of free updates and support through our platform available 24h/24.', 'yit'),
+              'description_second_column' => __('By purchasing the premium version of the plugin, you will take advantage of the advanced features of the product and you will get one year of free updates and support through our platform available 24h/24.', 'yit'),
               'button' => array(
                   'href' => 'http://yithemes.com/themes/plugins/yith-woocommerce-ajax-search/',
                   'title' => 'Get Support and Pro Features'
