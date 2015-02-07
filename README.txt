@@ -23,12 +23,8 @@ Did you ever forget the name of a product? Just start to write your keyphrase. A
 
 It works just like Google Suggest, but on your website, using your database.
 
-Working demo is available here:
 
-**[LIVE DEMO](http://preview.yithemes.com/sistina/)**
-
-
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search/).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search).
 
 
 = Installation =
