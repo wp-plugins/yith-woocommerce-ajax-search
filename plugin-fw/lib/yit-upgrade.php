@@ -54,7 +54,6 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
          */
         public function __construct() {
             add_filter( 'upgrader_pre_download', array( $this, 'upgrader_pre_download') , 10, 3 );
-            add_filter( 'http_request_host_is_external', '__return_true' );
             add_action( 'update-custom_upgrade-plugin-multisite', array( $this, 'upgrade_plugin_multisite' ) );
 
             if( is_network_admin() ){

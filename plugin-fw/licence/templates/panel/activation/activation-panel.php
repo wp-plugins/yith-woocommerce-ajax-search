@@ -95,7 +95,8 @@ $banned_products     = isset( $no_active_products[ '107' ] ) ? $no_active_produc
                         <td><a class="button-licence licence-renew" href="<?php echo $this->get_renewing_uri( $info['licence']['licence_key'] ) ?>" target="_blank"><?php _e( 'Renew', 'yit' ) ?></a></td>
                     </tr>
                 <?php endforeach; ?>
-        </tbody>
+            </tbody>
+        </table>
     <?php endif;?>
 
      <!-- Banned Products -->

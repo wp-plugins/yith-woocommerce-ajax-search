@@ -9,7 +9,8 @@ jQuery(document).ready(function($){
     "use strict";
 
     var el = $('#yith-s'),
-        loader_icon = el.data('loader-icon') == '' ? woocommerce_params.ajax_loader_url : el.data('loader-icon'),
+        def_loader = ( typeof woocommerce_params != 'undefined' && typeof woocommerce_params.ajax_loader_url != 'undefined' ) ? woocommerce_params.ajax_loader_url : yith_wcas_params.loading,
+        loader_icon = el.data('loader-icon') == '' ? def_loader : el.data('loader-icon'),
         min_chars = el.data('min-chars');
 
     el.autocomplete({

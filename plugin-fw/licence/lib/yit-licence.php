@@ -169,7 +169,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             $product      = $this->get_product( $product_init );
 
             $args = array(
-                'email'       => sanitize_email( $_REQUEST['email'] ),
+                'email'       => urlencode( sanitize_email( $_REQUEST['email'] ) ),
                 'licence_key' => sanitize_text_field( $_REQUEST['licence_key'] ),
                 'product_id'  => sanitize_text_field( $product['product_id'] ),
                 'secret_key'  => sanitize_text_field( $product['secret_key'] ),
@@ -190,7 +190,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             if ( $body && is_array( $body ) && isset( $body['activated'] ) && $body['activated'] ) {
 
                 $option[$product['product_id']] = array(
-                    'email'                => $args['email'],
+                    'email'                => urldecode( $args['email'] ),
                     'licence_key'          => $args['licence_key'],
                     'licence_expires'      => $body['licence_expires'],
                     'message'              => $body['message'],
@@ -237,7 +237,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             }
 
             $args = array(
-                'email'       => $licence[$product_id]['email'],
+                'email'       => urlencode( $licence[$product_id]['email'] ),
                 'licence_key' => $licence[$product_id]['licence_key'],
                 'product_id'  => $product_id,
                 'secret_key'  => $product['secret_key'],
