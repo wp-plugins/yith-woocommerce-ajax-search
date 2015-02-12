@@ -36,7 +36,7 @@ YITH WooCommerce Ajax Search will add a new submenu called "Cart Messages" under
 
 = Developer =
 
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search/) and discover how to do that.
+Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/) and discover how to do that.
 
 = Support =
 
@@ -117,7 +117,7 @@ If you have created your own language pack, or have an update for an existing on
 
 == Documentation ==
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_ajax_search/).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/).
 
 == Upgrade notice ==
 
