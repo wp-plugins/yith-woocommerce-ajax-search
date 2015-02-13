@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Ajax Search allows your users to search products in real time.
-WooCommerce 2.2.x Compatible.
+WooCommerce 2.3.x Compatible.
 
 == Description ==
 
