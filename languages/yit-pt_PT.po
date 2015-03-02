@@ -1,18 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: YITH WooCommerce Ajax Search Free\n"
-"POT-Creation-Date: 2015-03-02 10:10+0100\n"
-"PO-Revision-Date: 2015-03-02 10:10+0100\n"
-"Last-Translator: \n"
-"Language-Team: Yithemes <plugins@yithemes.com>\n"
-"Language: en\n"
+"Project-Id-Version: YITH WooCommerce Ajax Search\n"
+"POT-Creation-Date: 2015-03-02 10:11+0100\n"
+"PO-Revision-Date: 2015-03-02 10:11+0100\n"
+"Last-Translator: Luis Maia <lmsm76@gmail.com>\n"
+"Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.6\n"
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-Basepath: ./\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../class.yith-wcas-admin.php:106 ../class.yith-wcas-admin.php:128
@@ -21,7 +20,7 @@ msgstr ""
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
 #: ../plugin-fw/lib/yit-plugin-panel.php:62
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #: ../class.yith-wcas-admin.php:107 ../class.yith-wcas-admin.php:129
 msgid "Premium Version"
@@ -29,7 +28,7 @@ msgstr ""
 
 #: ../class.yith-wcas-admin.php:135 ../class.yith-wcas-admin.php:136
 msgid "Ajax Search"
-msgstr ""
+msgstr "Ajax Search"
 
 #: ../class.yith-wcas-admin.php:190
 msgid "Plugin Documentation"
@@ -37,8 +36,9 @@ msgstr ""
 
 #: ../class.yith-wcas-admin.php:207 ../plugin-options/settings-options.php:26
 #: ../plugin-options/settings-options.php:33
+#, fuzzy
 msgid "YITH WooCommerce Ajax Search"
-msgstr ""
+msgstr "YITH WooCommerce Ajax Product Search"
 
 #: ../class.yith-wcas-admin.php:208
 msgid ""
@@ -51,8 +51,9 @@ msgid ""
 msgstr ""
 
 #: ../class.yith-wcas-admin.php:221
+#, fuzzy
 msgid "YITH WooCommerce Ajax Search Updated"
-msgstr ""
+msgstr "YITH WooCommerce Ajax Product Search"
 
 #: ../class.yith-wcas-admin.php:222
 msgid ""
@@ -66,7 +67,7 @@ msgstr ""
 
 #: ../class.yith-wcas.php:168
 msgid "No results"
-msgstr ""
+msgstr "Sem resultados"
 
 #: ../init.php:39
 msgid ""
@@ -124,9 +125,9 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:466
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:580
-#, php-format
+#, fuzzy, php-format
 msgid "Search %s"
-msgstr ""
+msgstr "Procurar"
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:467
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:581
@@ -151,8 +152,9 @@ msgid "Category"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:627
+#, fuzzy
 msgid "Search Categories"
-msgstr ""
+msgstr "Procurar por:"
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:628
 msgid "All Categories"
@@ -187,9 +189,9 @@ msgid "Categories"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1042
-#, php-format
+#, fuzzy, php-format
 msgid "%s Settings"
-msgstr ""
+msgstr "Definições"
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1051
 msgid "Type"
@@ -253,8 +255,9 @@ msgid "Layout for single page of this portfolio"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1130
+#, fuzzy
 msgid "layout settings"
-msgstr ""
+msgstr "Definições"
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1222
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1235
@@ -286,8 +289,9 @@ msgid "The changes you made will be lost if you leave this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:61
+#, fuzzy
 msgid "Plugin Settings"
-msgstr ""
+msgstr "Definições"
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:92
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:101
@@ -323,12 +327,14 @@ msgid "The element you have written already exists. Please, add another name."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:411
+#, fuzzy
 msgid "Settings saved"
-msgstr ""
+msgstr "Definições"
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:412
+#, fuzzy
 msgid "Settings reset"
-msgstr ""
+msgstr "Definições"
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:413
 msgid "Element deleted correctly."
@@ -499,8 +505,9 @@ msgid "Software has been deactivated"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:532
+#, fuzzy
 msgid "Maximum number of activations exceeded"
-msgstr ""
+msgstr "Numero máximo de resultados"
 
 #: ../plugin-fw/licence/lib/yit-licence.php:533
 msgid "Invalid instance ID"
@@ -609,8 +616,9 @@ msgid "Expired"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/ajax-products.php:23
+#, fuzzy
 msgid "Search for a product"
-msgstr ""
+msgstr "Procurar por produtos"
 
 #: ../plugin-fw/templates/metaboxes/types/categories.php:36
 msgid "No categories."
@@ -629,8 +637,9 @@ msgid "Checkbox"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:7
+#, fuzzy
 msgid "Select"
-msgstr ""
+msgstr "Selecione uma data"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:8
 msgid "Textarea"
@@ -645,8 +654,9 @@ msgid "Password Field"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:11
+#, fuzzy
 msgid "File Upload"
-msgstr ""
+msgstr "Carregar"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:45
 msgid "Theme Icon"
@@ -674,8 +684,9 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:67
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:259
+#, fuzzy
 msgid "Click to toggle"
-msgstr ""
+msgstr "Clicar para pré-visualizar"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:74
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:266
@@ -684,8 +695,9 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:78
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:270
+#, fuzzy
 msgid "Insert the title for the field."
-msgstr ""
+msgstr "Selecione uma fonte"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:83
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:275
@@ -706,8 +718,9 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:100
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:292
+#, fuzzy
 msgid "Select the type for this field."
-msgstr ""
+msgstr "Selecione uma fonte"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:105
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:297
@@ -732,8 +745,9 @@ msgstr ""
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:118
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:310
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+#, fuzzy
 msgid "Selected"
-msgstr ""
+msgstr "Selecione uma data"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:121
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:313
@@ -800,7 +814,7 @@ msgstr ""
 #: ../plugin-fw/templates/panel/types/upload.php:31
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-upload.php:35
 msgid "Upload"
-msgstr ""
+msgstr "Carregar"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:206
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:394
@@ -923,19 +937,19 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:42
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:43
 msgid "em"
-msgstr ""
+msgstr "em"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:44
 msgid "pt"
-msgstr ""
+msgstr "pt"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:45
 msgid "rem"
-msgstr ""
+msgstr "rem"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:59
 #: ../plugin-fw/templates/metaboxes/types/typography.php:153
@@ -949,23 +963,23 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:96
 msgid "Regular"
-msgstr ""
+msgstr "Regular"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:97
 msgid "Bold"
-msgstr ""
+msgstr "Bold"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:98
 msgid "Extra bold"
-msgstr ""
+msgstr "Extra bold"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:99
 msgid "Italic"
-msgstr ""
+msgstr "Italic"
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:100
 msgid "Italic bold"
-msgstr ""
+msgstr "Italic bold"
 
 #: ../plugin-options/settings-options.php:23
 msgid "Upgrade to the PREMIUM VERSION"
@@ -993,58 +1007,71 @@ msgid ""
 msgstr ""
 
 #: ../plugin-options/settings-options.php:46
+#, fuzzy
 msgid "General settings"
-msgstr ""
+msgstr "Definições Gerais"
 
 #: ../plugin-options/settings-options.php:55
 msgid "Search input label"
-msgstr ""
+msgstr "Etiqueta Entrada Dados"
 
 #: ../plugin-options/settings-options.php:57
 #: ../plugin-options/settings-options.php:65
 msgid "Label for Search input field."
-msgstr ""
+msgstr "Etiqueta para campo introdução Procura Dados."
 
 #: ../plugin-options/settings-options.php:59
 msgid "Search for products"
-msgstr ""
+msgstr "Procurar por produtos"
 
 #: ../plugin-options/settings-options.php:63
 msgid "Search submit label"
-msgstr ""
+msgstr "Etiqueta do botão submeter"
 
 #: ../plugin-options/settings-options.php:67
 msgid "Search"
-msgstr ""
+msgstr "Procurar"
 
 #: ../plugin-options/settings-options.php:71
 msgid "Minimum number of characters"
-msgstr ""
+msgstr "Numero minimo caracteres"
 
 #: ../plugin-options/settings-options.php:72
 msgid "Minimum number of characters required to trigger autosuggest."
-msgstr ""
+msgstr "Numero de caracteres necessário para ativar a autosugestão"
 
 #: ../plugin-options/settings-options.php:85
 msgid "Maximum number of results"
-msgstr ""
+msgstr "Numero máximo de resultados"
 
 #: ../plugin-options/settings-options.php:86
 msgid "Maximum number of results showed within the autosuggest box."
-msgstr ""
+msgstr "Numero máximo de resultados a mostrar na caixa de autosugestão"
 
 #: ../templates/yith-woocommerce-ajax-search.php:20
 msgid "Search for:"
-msgstr ""
+msgstr "Procurar por:"
 
 #: ../widgets/class.yith-wcas-ajax-search.php:29
 msgid "An Ajax Search box for products only."
-msgstr ""
+msgstr "Uma caixa de Procura somente de produtos em Ajax"
 
 #: ../widgets/class.yith-wcas-ajax-search.php:31
 msgid "YITH WooCommerce Ajax Product Search"
-msgstr ""
+msgstr "YITH WooCommerce Ajax Product Search"
 
 #: ../widgets/class.yith-wcas-ajax-search.php:90
 msgid "Title:"
-msgstr ""
+msgstr "Titulo:"
+
+#~ msgid "Label for Search submit field."
+#~ msgstr "Etiqueta para o campo do botão Procurar"
+
+#~ msgid "Docs"
+#~ msgstr "Documentação"
+
+#~ msgid "Hours"
+#~ msgstr "Horas"
+
+#~ msgid "Minutes"
+#~ msgstr "Minutos"

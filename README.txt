@@ -1,10 +1,10 @@
 === YITH WooCommerce Ajax Search ===
 
 Contributors: yithemes
-Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop, yith, ajax search, instant search, premium, yithemes
+Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop, yith, ajax search, instant search, premium, yithemes, autocomplete, autosuggest, better search, category search, custom search, highlight terms, Live Search, Predictive Search, product search, relevant search, search highlight, search product, suggest, typeahead, WooCommerce Plugin, woocommerce product search, woocommerce search, wordpress ecommerce
 Requires at least: 3.5.1
-Tested up to: 4.1
-Stable tag: 1.2.2
+Tested up to: 4.1.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,10 @@ In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of t
 
 == Changelog ==
 
+= 1.2.3 =
+* Added: Support to Wordpress 4.1.1
+* Fixed: Minor bugs
+
 = 1.2.2 =
 
 * Added: Support to WooCommerce 2.3.x
@@ -120,6 +124,41 @@ If you have created your own language pack, or have an update for an existing on
 Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/).
 
 == Upgrade notice ==
+
+= 1.2.3 =
+* Added: Support to Wordpress 4.1.1
+* Fixed: Minor bugs
+
+= 1.2.2 =
+
+* Added: Support to WooCommerce 2.3.x
+* Fixed: Minor bugs
+
+= 1.2.1 =
+
+* Updated: Plugin Core Framework
+
+= 1.2 =
+
+* Updated: Plugin Core Framework
+
+= 1.1.3 =
+
+* Fixed: Javascript code in external file
+
+= 1.1.2 =
+
+* Fixed: Prevent undefined title index if the widget is called by the the_widget func
+* Updated: Autocomplete js library
+* Updated: Plugin Core Framework
+
+= 1.1.1 =
+
+* Fixed: Settings link doesn't work on WooCommerce 2.1.1
+
+= 1.1.0 =
+
+* Added: Support to WooCommerce 2.1.x
 
 = 1.0.0 =
 
