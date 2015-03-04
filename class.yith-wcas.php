@@ -55,7 +55,9 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
             add_shortcode( 'yith_woocommerce_ajax_search', array( $this, 'add_woo_ajax_search_shortcode' ) );
 
             if ( is_admin() ) {
+
                 $this->obj = new YITH_WCAS_Admin( $this->version );
+                
             }
             else {
                 $this->obj = new YITH_WCAS_Frontend( $this->version );

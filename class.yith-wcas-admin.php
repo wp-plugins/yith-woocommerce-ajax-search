@@ -104,7 +104,7 @@ if( !class_exists( 'YITH_WCAS_Admin' ) ) {
         public function action_links( $links ) {
 
             $links[] = '<a href="' . admin_url( "admin.php?page={$this->_panel_page}" ) . '">' . __( 'Settings', 'yit' ) . '</a>';
-            $links[] = '<a href="' . $this->_premium_landing . '" target="_blank">' . __( 'Premium Version', 'yit' ) . '</a>';
+            $links[] = '<a href="' . $this->get_premium_landing_uri() . '" target="_blank">' . __( 'Premium Version', 'yit' ) . '</a>';
 
             return $links;
         }
@@ -221,7 +221,7 @@ YITH WooCommerce Ajax Search is available in an outstanding PREMIUM version with
                     __( 'YITH WooCommerce Ajax Search Updated', 'yit' ),
                     __( 'From now on, you can find all the options of YITH WooCommerce Ajax Search Updated under YIT Plugin -> Ajax Search instead of WooCommerce -> Settings -> Ajax Search, as in the previous version.
 When one of our plugins updates, a new voice will be added to this menu.
-YITH WooCommerce Ajax Search renovates with new available options, discover the <a href="'.$this->_premium_landing.'">PREMIUM version</a>.
+YITH WooCommerce Ajax Search renovates with new available options, discover the <a href="'.$this->get_premium_landing_uri().'">PREMIUM version</a>.
 ', 'yit' )
                 ),
                 'position'   => array( 'edge' => 'left', 'align' => 'center' ),
@@ -230,6 +230,18 @@ YITH WooCommerce Ajax Search renovates with new available options, discover the 
 
             YIT_Pointers()->register( $args );
         }
+
+
+        /**
+     * Get the premium landing uri
+     *
+     * @since   1.0.0
+     * @author  Andrea Grillo <andrea.grillo@yithemes.com>
+     * @return  string The premium landing link
+     */
+    public function get_premium_landing_uri(){
+        return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing;
+    }
 
     }
 }

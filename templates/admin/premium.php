@@ -1,3 +1,4 @@
+<?php global $yith_wcas ?>
 <style>
     .section{
         margin-left: -20px;
@@ -251,7 +252,7 @@
                     Upgrade to the <span class="highlight">premium version</span><br/>
                     of <span class="highlight">YITH WooCommerce Ajax Search</span> to benefit from all features!
                 </p>
-                <a href="http://yithemes.com/themes/plugins/yith-woocommerce-ajax-search/" target="_blank" class="premium-cta-button button btn">
+                <a href="<?php echo $yith_wcas->obj->get_premium_landing_uri() ?>" target="_blank" class="premium-cta-button button btn">
                     <span class="highlight">UPGRADE</span>
                     <span>to the premium version</span>
                 </a>
@@ -303,7 +304,7 @@
                     Upgrade to the <span class="highlight">premium version</span><br/>
                     of <span class="highlight">YITH WooCommerce Ajax Search</span> to benefit from all features!
                 </p>
-                <a href="http://yithemes.com/themes/plugins/yith-woocommerce-ajax-search/" target="_blank" class="premium-cta-button button btn">
+                <a href="<?php echo $yith_wcas->obj->get_premium_landing_uri() ?>" target="_blank" class="premium-cta-button button btn">
                     <span class="highlight">UPGRADE</span>
                     <span>to the premium version</span>
                 </a>

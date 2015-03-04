@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-
+global $yith_wcas;
 return array(
 
 	'settings' => array(
@@ -35,7 +35,7 @@ of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yit'),
               'title_second_column' => __( 'Get Support and Pro Features', 'yit' ),
               'description_second_column' => __('By purchasing the premium version of the plugin, you will take advantage of the advanced features of the product and you will get one year of free updates and support through our platform available 24h/24.', 'yit'),
               'button' => array(
-                  'href' => 'http://yithemes.com/themes/plugins/yith-woocommerce-ajax-search/',
+                  'href' => $yith_wcas->obj->get_premium_landing_uri(),
                   'title' => 'Get Support and Pro Features'
               )
           ),
