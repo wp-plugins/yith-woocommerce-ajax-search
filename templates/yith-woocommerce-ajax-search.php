@@ -23,6 +23,7 @@ wp_enqueue_script('yith_wcas_frontend' );
                    value="<?php echo get_search_query() ?>"
                    name="s"
                    id="yith-s"
+                   class="yith-s"
                    placeholder="<?php echo get_option('yith_wcas_search_input_label') ?>"
                    data-loader-icon="<?php echo str_replace( '"', '', apply_filters('yith_wcas_ajax_search_icon', '') ) ?>"
                    data-min-chars="<?php echo get_option('yith_wcas_min_chars'); ?>" />

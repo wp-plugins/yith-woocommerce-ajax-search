@@ -13,6 +13,8 @@ jQuery(document).ready(function ($) {
         loader_icon = el.data('loader-icon') == '' ? def_loader : el.data('loader-icon'),
         min_chars = el.data('min-chars');
 
+    if( el.length == 0 ) el = $('#yith-s');
+
     el.each(function () {
         var $t = $(this),
             append_to = ( typeof  $t.data('append-to') == 'undefined') ? $t.closest('.yith-ajaxsearchform-container') : $t.data('append-to');
