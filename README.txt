@@ -32,7 +32,7 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 Once you have installed the plugin, you just need to activate the plugin in order to enable it.
 
 = Configuration =
-YITH WooCommerce Ajax Search will add a new submenu called "Cart Messages" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
+YITH WooCommerce Ajax Search will add a new submenu called "Ajax Search" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
 
 = Developer =
 
@@ -111,7 +111,7 @@ In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of t
 
 == Suggestions ==
 
-If you have suggestions about how to improve YITH WooCommerce Zoom Magnifier, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH Zoom WooCommerce Magnifier.
+If you have suggestions about how to improve YITH WooCommerce Ajax Search, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH WooCommerce Ajax Search.
 
 == Translators ==
 
@@ -120,7 +120,7 @@ If you have suggestions about how to improve YITH WooCommerce Zoom Magnifier, yo
 * Italiano
 
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
-[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Zoom Magnfier Languages.
+[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Ajax Search.
 
 == Documentation ==
 
