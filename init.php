@@ -3,7 +3,7 @@
 * Plugin Name: YITH WooCommerce Ajax Search
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Ajax Search allows your users to search products in real time.
-* Version: 1.2.4
+* Version: 1.2.5
 * Author: Yithemes
 * Author URI: http://yithemes.com/
 * Text Domain: yit
@@ -11,7 +11,7 @@
 *
 * @author Yithemes
 * @package YITH WooCommerce Ajax Search
-* @version 1.2.4
+* @version 1.2.5
 */
 
 /*  Copyright 2013  Your Inspiration Themes  (email : plugins@yithemes.com)
@@ -32,18 +32,6 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 
-if ( !function_exists( 'WC' ) ) {
-    function yith_wcas_install_woocommerce_admin_notice() {
-        ?>
-        <div class="error">
-            <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
-        </div>
-    <?php
-    }
-
-    add_action( 'admin_notices', 'yith_wcas_install_woocommerce_admin_notice' );
-    return;
-}
 
 if ( defined( 'YITH_WCAS_PREMIUM' ) ) {
     function yith_wcas_install_free_admin_notice() {
@@ -71,7 +59,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 if ( defined( 'YITH_WCAS_VERSION' ) ){
     return;
 }else{
-    define( 'YITH_WCAS_VERSION', '1.2.4' );
+    define( 'YITH_WCAS_VERSION', '1.2.5' );
 }
 
 if ( ! defined( 'YITH_WCAS_FREE_INIT' ) ) {
@@ -108,6 +96,20 @@ if ( ! defined( 'YITH_WCAS_ASSETS_IMAGES_URL' ) ) {
 
 
 function yith_ajax_search_constructor() {
+
+    if ( !function_exists( 'WC' ) ) {
+        function yith_wcas_install_woocommerce_admin_notice() {
+            ?>
+            <div class="error">
+                <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
+            </div>
+        <?php
+        }
+
+        add_action( 'admin_notices', 'yith_wcas_install_woocommerce_admin_notice' );
+        return;
+    }
+
 
     load_plugin_textdomain( 'yit', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
 

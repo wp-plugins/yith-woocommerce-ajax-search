@@ -75,7 +75,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_menu' ), 100 );
                 add_action( 'admin_init', array( &$this, 'add_fields' ) );
 
-
+                /* Add VideoBox and InfoBox */
+                add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'add_infobox' ), 10, 1 );
+                add_action( 'woocommerce_admin_field_videobox', array( $this, 'add_videobox' ), 10, 1 );
             }
 
             add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
@@ -677,6 +679,16 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 $option     = $param ['option'];
                 $db_options = $this->get_options();
 
+                $custom_attributes = array();
+
+                if ( ! empty( $option['custom_attributes'] ) && is_array( $option['custom_attributes'] ) ) {
+                    foreach ( $option['custom_attributes'] as $attribute => $attribute_value ) {
+                        $custom_attributes[] = esc_attr( $attribute ) . '="' . esc_attr( $attribute_value ) . '"';
+                    }
+                }
+
+                $custom_attributes = implode( ' ', $custom_attributes );
+
                 $db_value = ( isset( $db_options[$option['id']] ) ) ? $db_options[$option['id']] : '';
                 if ( isset( $option['deps'] ) ) {
                     $deps = $option['deps'];
@@ -686,7 +698,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     include $type;
                 }
                 else {
-                    do_action( "yit_panel_{$option['type']}" );
+                    do_action( "yit_panel_{$option['type']}", $option, $db_value );
                 }
             }
         }
@@ -709,6 +721,38 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
             return $options;
         }
 
+        /**
+         * Show a box panel with specific content in two columns as a new woocommerce type
+         *
+         *
+         * @param array $args
+         *
+         * @return   void
+         * @since    1.0
+         * @author   Emanuela Castorina      <emanuela.castorina@yithemes.com>
+         */
+        public function add_infobox( $args = array() ) {
+            if ( ! empty( $args ) ) {
+                extract( $args );
+                require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/boxinfo.php' );
+            }
+        }
+
+        /**
+         * Show a box panel with specific content in two columns as a new woocommerce type
+         *
+         * @param array $args
+         *
+         * @return   void
+         * @since    1.0
+         * @author   Emanuela Castorina      <emanuela.castorina@yithemes.com>
+         */
+        public function add_videobox( $args = array() ) {
+            if ( ! empty( $args ) ) {
+                extract( $args );
+                require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/videobox.php' );
+            }
+        }
 
     }
 
