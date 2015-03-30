@@ -11,7 +11,16 @@ jQuery(document).ready(function ($) {
     var el = $('.yith-s'),
         def_loader = ( typeof woocommerce_params != 'undefined' && typeof woocommerce_params.ajax_loader_url != 'undefined' ) ? woocommerce_params.ajax_loader_url : yith_wcas_params.loading,
         loader_icon = el.data('loader-icon') == '' ? def_loader : el.data('loader-icon'),
+        search_button = $('#yith-searchsubmit'),
         min_chars = el.data('min-chars');
+
+    search_button.on('click', function(){
+        var form = $(this).closest('form');
+        if( form.find('.yith-s').val()==''){
+            return false;
+        }
+        return true;
+    });
 
     if( el.length == 0 ) el = $('#yith-s');
 
@@ -30,6 +39,9 @@ jQuery(document).ready(function ($) {
                 if (suggestion.id != -1) {
                     window.location.href = suggestion.url;
                 }
+            }  ,
+            onSearchComplete: function () {
+                $t.css('background', 'transparent');
             }
         });
     });

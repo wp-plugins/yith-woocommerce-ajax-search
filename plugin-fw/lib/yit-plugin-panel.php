@@ -46,12 +46,14 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          */
         private $_main_array_options = array();
 
-        /**
-         * Constructor
-         *
-         * @since  1.0
-         * @author Emanuela Castorina <emanuela.castorina@yithemes.it>
-         */
+	    /**
+	     * Constructor
+	     *
+	     * @since  1.0
+	     * @author Emanuela Castorina <emanuela.castorina@yithemes.it>
+	     *
+	     * @param array $args
+	     */
         public function __construct( $args = array() ) {
 
             if ( ! empty( $args ) ) {
@@ -60,7 +62,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     'parent_slug' => 'edit.php?',
                     'page_title'  => __( 'Plugin Settings', 'yit' ),
                     'menu_title'  => __( 'Settings', 'yit' ),
-                    'capability'  => 'manage_options'
+                    'capability'  => 'manage_options',
+	                'icon_url'    => '',
+	                'position'    => null
                 );
 
                 $this->settings         = wp_parse_args( $args, $default_args );
@@ -70,14 +74,11 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     $this->add_menu_page();
                 }
 
-                add_action( 'admin_init', array( &$this, 'register_settings' ) );
-                add_action( 'admin_menu', array( &$this, 'add_setting_page' ) );
-                add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_menu' ), 100 );
-                add_action( 'admin_init', array( &$this, 'add_fields' ) );
+                add_action( 'admin_init', array( $this, 'register_settings' ) );
+                add_action( 'admin_menu', array( $this, 'add_setting_page' ), 20 );
+                add_action( 'admin_bar_menu', array( $this, 'add_admin_bar_menu' ), 100 );
+                add_action( 'admin_init', array( $this, 'add_fields' ) );
 
-                /* Add VideoBox and InfoBox */
-                add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'add_infobox' ), 10, 1 );
-                add_action( 'woocommerce_admin_field_videobox', array( $this, 'add_videobox' ), 10, 1 );
             }
 
             add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
@@ -118,14 +119,18 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Emanuela Castorina <emanuela.castorina@yithemes.it>
          */
         public function admin_enqueue_scripts() {
+
+	        global $wp_scripts;
+
             //scripts
             wp_enqueue_media();
             wp_enqueue_script( 'jquery-ui' );
             wp_enqueue_script( 'jquery-ui-core' );
             wp_enqueue_script( 'jquery-ui-slider' );
+            wp_enqueue_script( 'jquery-ui-dialog' );
             wp_enqueue_style( 'jquery-chosen', YIT_CORE_PLUGIN_URL . '/assets/css/chosen/chosen.css' );
             wp_enqueue_script( 'jquery-chosen', YIT_CORE_PLUGIN_URL . '/assets/js/chosen/chosen.jquery.js', array( 'jquery' ), '1.1.0', true );
-            wp_enqueue_script( 'yit-plugin-panel', YIT_CORE_PLUGIN_URL . '/assets/js/yit-plugin-panel.min.js', array( 'jquery', 'jquery-chosen' ), $this->version, true );
+            wp_enqueue_script( 'yit-plugin-panel', YIT_CORE_PLUGIN_URL . '/assets/js/yit-plugin-panel.js', array( 'jquery', 'jquery-chosen' ), $this->version, true );
             wp_register_script( 'codemirror', YIT_CORE_PLUGIN_URL . '/assets/js/codemirror/codemirror.js', array( 'jquery' ), $this->version, true );
             wp_register_script( 'codemirror-javascript', YIT_CORE_PLUGIN_URL . '/assets/js/codemirror/javascript.js', array( 'jquery', 'codemirror' ), $this->version, true );
 
@@ -133,9 +138,14 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
             wp_register_style( 'codemirror', YIT_CORE_PLUGIN_URL . '/assets/css/codemirror/codemirror.css' );
 
             //styles
+
+	        $jquery_version = isset( $wp_scripts->registered['jquery-ui-core']->ver ) ? $wp_scripts->registered['jquery-ui-core']->ver : '1.9.2';
+
             wp_enqueue_style( 'jquery-ui-overcast', YIT_CORE_PLUGIN_URL . '/assets/css/overcast/jquery-ui-1.8.9.custom.css', false, '1.8.9', 'all' );
             wp_enqueue_style( 'yit-plugin-style', YIT_CORE_PLUGIN_URL . '/assets/css/yit-plugin-panel.css', $this->version );
             wp_enqueue_style( 'raleway-font', '//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,100,200,300,900' );
+
+	        wp_enqueue_style( 'jquery-ui-style', '//code.jquery.com/ui/' . $jquery_version . '/themes/smoothness/jquery-ui.css', array(), $jquery_version );
         }
 
         /**
@@ -148,7 +158,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Emanuela Castorina <emanuela.castorina@yithemes.it>
          */
         public function register_settings() {
-            register_setting( 'yit_' . $this->settings['parent'] . '_options', 'yit_' . $this->settings['parent'] . '_options', array( &$this, 'options_validate' ) );
+            register_setting( 'yit_' . $this->settings['parent'] . '_options', 'yit_' . $this->settings['parent'] . '_options', array( $this, 'options_validate' ) );
         }
 
         /**
@@ -223,7 +233,15 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Emanuela Castorina <emanuela.castorina@yithemes.it>
          */
         public function add_setting_page() {
-            add_submenu_page( $this->settings['parent_slug'] . $this->settings['parent_page'], $this->settings['page_title'], $this->settings['menu_title'], $this->settings['capability'], $this->settings['page'], array( &$this, 'yit_panel' ) );
+	        $this->settings['icon_url'] = isset( $this->settings['icon_url'] ) ? $this->settings['icon_url'] : '';
+		    $this->settings['position'] = isset( $this->settings['position'] ) ? $this->settings['position'] : null;
+	        $parent = $this->settings['parent_slug'] . $this->settings['parent_page'];
+
+	        if ( ! empty( $parent ) ) {
+		        add_submenu_page( $parent, $this->settings['page_title'], $this->settings['menu_title'], $this->settings['capability'], $this->settings['page'], array( $this, 'yit_panel' ) );
+	        } else {
+		        add_menu_page( $this->settings['page_title'], $this->settings['menu_title'], $this->settings['capability'], $this->settings['page'], array( $this, 'yit_panel' ), $this->settings['icon_url'], $this->settings['position'] );
+	        }
             /* === Duplicate Items Hack === */
             $this->remove_duplicate_submenu_page();
             do_action( 'yit_after_add_settings_page' );
@@ -261,6 +279,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 return;
             }
             ?>
+	        <?php $this->print_video_box(); ?>
             <div id="wrap" class="plugin-option">
                 <?php $this->message(); ?>
                 <h2><?php echo $this->get_tab_title() ?></h2>
@@ -275,7 +294,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     <form method="post">
                         <?php $warning = __( 'If you continue with this action, you will reset all options in this page.', 'yit' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yit' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yit' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>
@@ -753,6 +772,25 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/videobox.php' );
             }
         }
+
+	    /**
+	     * Fire the action to print the custom tab
+	     *
+	     * @return void
+	     * @since    1.0
+	     * @author   Antonino Scarfì <antonino.scarfi@yithemes.com>
+	     */
+	    public function print_video_box() {
+		    $file = $this->settings['options-path'] . '/video-box.php';
+
+		    if ( ! file_exists( $file ) ) {
+			    return;
+		    }
+
+		    $args = include_once( $file );
+
+		    $this->add_videobox( $args );
+	    }
 
     }
 

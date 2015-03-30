@@ -232,26 +232,6 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
             }
         }
 
-	    /**
-	     * Fire the action to print the custom tab
-	     *
-	     * @param $current_tab string
-	     *
-	     * @return void
-	     * @since    1.0
-	     * @author   Antonino Scarfì <antonino.scarfi@yithemes.com>
-	     */
-	    public function print_video_box() {
-		    $file = $this->settings['options-path'] . '/video-box.php';
-
-		    if ( ! file_exists( $file ) ) {
-			    return;
-		    }
-
-		    $args = include_once( $file );
-		    $this->yit_videobox( $args );
-	    }
-
         /**
          * Update options
          *

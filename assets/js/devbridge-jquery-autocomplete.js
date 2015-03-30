@@ -126,7 +126,6 @@
     };
 
     Autocomplete.prototype = {
-
         killerFn: null,
 
         initialize: function () {

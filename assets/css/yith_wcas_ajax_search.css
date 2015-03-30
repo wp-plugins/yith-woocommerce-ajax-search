@@ -12,11 +12,9 @@
     padding-bottom: 10px;
     background: #fff;
     border: 1px solid #ccc;
-
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }

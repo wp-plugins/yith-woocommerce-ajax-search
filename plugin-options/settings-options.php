@@ -17,8 +17,6 @@ return array(
 
 	'settings' => array(
 
-
-
         'section_general_settings_videobox'         => array(
           'name' => __( 'Upgrade to the PREMIUM VERSION', 'yit' ),
           'type' => 'videobox',
