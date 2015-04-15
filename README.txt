@@ -9,7 +9,6 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Ajax Search allows your users to search products in real time.
-WooCommerce 2.3.x Compatible.
 
 == Description ==
 
@@ -23,47 +22,44 @@ Did you ever forget the name of a product? Just start to write your keyphrase. A
 
 It works just like Google Suggest, but on your website, using your database.
 
+**Plugin's features:**
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/).
+* Widget e shortcodes per poter visualizzare il searchform in qualsiasi parte del sito
+* Opzioni per la customizzazione del searchform
+* Opzioni per la visualizzazione dei risultati di ricerca
 
 
-= Installation =
+For a more detailed list of options and features of the plugin, please look at the [official documentation](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/ "YITH Woocommerce Ajax Search official documentation").
 
-Once you have installed the plugin, you just need to activate the plugin in order to enable it.
-
-= Configuration =
-YITH WooCommerce Ajax Search will add a new submenu called "Ajax Search" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
-
-= Developer =
-
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/) and discover how to do that.
-
-= Support =
-
-Already knew it, right?! Great, but maybe you do not know that: if you're looking for how to install the plugins or how to use them within your Wordpress installations, which is the right way to ask support?
-That's the way:
-
-* Register on http://yithemes.com
-* Go to Support > Get Support
-
-Here we provide support, not on wordpress.org were, usually we do not read topics. It's better to follow us or write on our forum!
 
 == Installation ==
+Important: First of all, you have to download and activate WooCommerce plugin, which is mandatory for YITH WooCommerce Ajax Search to be working.
 
 1. Unzip the downloaded zip file.
 2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
 3. Activate `YITH WooCommerce Ajax Search` from Plugins page
 
-== Frequently Asked Questions ==
+= Configuration =
+YITH WooCommerce Ajax Search will add a new tab called "Ajax Search" in "YIT Plugins" menu item. There, you will find all Yithemes plugins with quick access to plugin setting page.
 
-= How can I change the minimum number of characters? =
-In WooCommerce->Settings->Ajax Search page, you can choose the minumum size of the search before to trigger autosuggest.
+== Suggestions ==
+If you have any suggestions concerning how to improve YITH Woocommerce Request A Quote, you can [write to us](mailto:plugins@yithemes.com "Your Inspiration Themes"), so that we can improve YITH Woocommerce Request A Quote.
+
+== Translators ==
+
+= Available Languages =
+* English (Default)
+* Italiano
+
+If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
+[to us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Ajax Search.
+
 
 
 == Screenshots ==
 
-1. The plugin at work displaying the ajax search results
-2. The Ajax Search settings page
+1. The Ajax Search settings page
+2. The plugin at work displaying the ajax search results
 
 == Changelog ==
 = 1.2.7 =
@@ -120,22 +116,6 @@ Fixed: Support to WPML in query string
 
 * Initial release
 
-== Suggestions ==
-
-If you have suggestions about how to improve YITH WooCommerce Ajax Search, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH WooCommerce Ajax Search.
-
-== Translators ==
-
-= Available Languages =
-* English (Default)
-* Italiano
-
-If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
-[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Ajax Search.
-
-== Documentation ==
-
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/).
 
 == Upgrade notice ==
 = 1.2.7 =
