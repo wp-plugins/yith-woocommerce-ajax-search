@@ -24,9 +24,9 @@ It works just like Google Suggest, but on your website, using your database.
 
 **Plugin's features:**
 
-* Widget e shortcodes per poter visualizzare il searchform in qualsiasi parte del sito
-* Opzioni per la customizzazione del searchform
-* Opzioni per la visualizzazione dei risultati di ricerca
+* Widget and shortcodes to show the searchform in every part of the site
+* Options for the customization of the searchform
+* Options for the visualization of the search results
 
 
 For a more detailed list of options and features of the plugin, please look at the [official documentation](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/ "YITH Woocommerce Ajax Search official documentation").
