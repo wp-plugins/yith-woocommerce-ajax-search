@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop, yith, ajax search, instant search, premium, yithemes, autocomplete, autosuggest, better search, category search, custom search, highlight terms, Live Search, Predictive Search, product search, relevant search, search highlight, search product, suggest, typeahead, WooCommerce Plugin, woocommerce product search, woocommerce search, wordpress ecommerce
 Requires at least: 3.5.1
-Tested up to: 4.1.1
-Stable tag: 1.2.7
+Tested up to: 4.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,6 @@ It works just like Google Suggest, but on your website, using your database.
 * Widget and shortcodes to show the searchform in every part of the site
 * Options for the customization of the searchform
 * Options for the visualization of the search results
-
 
 For a more detailed list of options and features of the plugin, please look at the [official documentation](http://yithemes.com/docs-plugins/yith-woocommerce-ajax-search/ "YITH Woocommerce Ajax Search official documentation").
 
@@ -62,6 +61,12 @@ If you have created your own language pack, or have an update for an existing on
 2. The plugin at work displaying the ajax search results
 
 == Changelog ==
+
+= 1.3.0 =
+Added: Wordpress 4.2 compatibility
+Fixed: Shorcode output
+Fixed: Wp security issue
+
 = 1.2.7 =
 Updated: Plugin Core Framework
 
@@ -118,6 +123,11 @@ Fixed: Support to WPML in query string
 
 
 == Upgrade notice ==
+= 1.3.0 =
+Added: Wordpress 4.2 compatibility
+Fixed: Shorcode output
+Fixed: Wp security issue
+
 = 1.2.7 =
 Updated: Plugin Core Framework
 
