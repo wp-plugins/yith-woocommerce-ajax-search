@@ -63,26 +63,32 @@ If you have created your own language pack, or have an update for an existing on
 == Changelog ==
 
 = 1.3.0 =
-Added: Wordpress 4.2 compatibility
-Fixed: Shorcode output
-Fixed: Wp security issue
+
+* Added: Wordpress 4.2 compatibility
+* Fixed: Shorcode output
+* Fixed: Wp security issue
 
 = 1.2.7 =
-Updated: Plugin Core Framework
+
+* Updated: Plugin Core Framework
 
 = 1.2.6 =
-Updated: Plugin Core Framework
-Fixed: Loader image not hided after search
-Fixed: Disabled submit when search string is empty
-Fixed: Support to WPML in query string
+
+* Updated: Plugin Core Framework
+* Fixed: Loader image not hided after search
+* Fixed: Disabled submit when search string is empty
+* Fixed: Support to WPML in query string
 
 = 1.2.5 =
+
 * Fixed: Plugin installation bug
 
 = 1.2.4 =
+
 * Fixed: Minor bugs
 
 = 1.2.3 =
+
 * Added: Support to Wordpress 4.1.1
 * Fixed: Minor bugs
 
@@ -124,26 +130,32 @@ Fixed: Support to WPML in query string
 
 == Upgrade notice ==
 = 1.3.0 =
-Added: Wordpress 4.2 compatibility
-Fixed: Shorcode output
-Fixed: Wp security issue
+
+* Added: Wordpress 4.2 compatibility
+* Fixed: Shorcode output
+* Fixed: Wp security issue
 
 = 1.2.7 =
-Updated: Plugin Core Framework
+
+* Updated: Plugin Core Framework
 
 = 1.2.6 =
-Updated: Plugin Core Framework
-Fixed: Loader image not hided after search
-Fixed: Disabled submit when search string is empty
-Fixed: Support to WPML in query string
+
+* Updated: Plugin Core Framework
+* Fixed: Loader image not hided after search
+* Fixed: Disabled submit when search string is empty
+* Fixed: Support to WPML in query string
 
 = 1.2.5 =
+
 * Fixed: Plugin installation bug
 
 = 1.2.4 =
+
 * Fixed: Minor bugs
 
 = 1.2.3 =
+
 * Added: Support to Wordpress 4.1.1
 * Fixed: Minor bugs
 
@@ -180,4 +192,4 @@ Fixed: Support to WPML in query string
 
 = 1.0.0 =
 
-Initial release
+* Initial release
