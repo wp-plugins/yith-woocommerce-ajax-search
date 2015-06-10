@@ -28,7 +28,7 @@
 
             var t = $(this).attr('href');
             $(this).parent().addClass('tabs').siblings('li').removeClass('tabs');
-            $('.tabs-panel').slideUp('fast');
+            $(this).closest('.metaboxes-tab').find('.tabs-panel').slideUp('fast');
             $(t).delay(350).slideDown('fast');
 
             return false;
@@ -42,22 +42,26 @@
     $(document).on('click', '.metaboxes-tab .upload_button', function(e) {
         var send_attachment_bkp = wp.media.editor.send.attachment;
         var button = $(this);
-        var id = button.attr('id').replace('-button', '');
-        _custom_media = true;
-        wp.media.editor.send.attachment = function(props, attachment){
-            if ( _custom_media ) {
-                if( $("#"+id).is('input[type=text]') ) {
-                    $("#"+id).val(attachment.url);
+        if( typeof button.attr('id') != 'undefined' )  {
+
+            var id = button.attr('id').replace('-button', '');
+            _custom_media = true;
+            wp.media.editor.send.attachment = function(props, attachment){
+                if ( _custom_media ) {
+                    if( $("#"+id).is('input[type=text]') ) {
+                        $("#"+id).val(attachment.url);
+                    } else {
+                        $("#"+id + '_custom').val(attachment.url);
+                    }
                 } else {
-                    $("#"+id + '_custom').val(attachment.url);
-                }
-            } else {
-                return _orig_send_attachment.apply( this, [props, attachment] );
-            };
+                    return _orig_send_attachment.apply( this, [props, attachment] );
+                };
+            }
+
+            wp.media.editor.open(button);
+            return false;
         }
 
-        wp.media.editor.open(button);
-        return false;
     });
 
     $('.metaboxes-tab .add_media').on('click', function(){

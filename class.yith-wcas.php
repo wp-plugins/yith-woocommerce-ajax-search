@@ -51,6 +51,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
             add_action( 'wp_ajax_nopriv_yith_ajax_search_products', array( $this, 'ajax_search_products' ) );
 
 
+
             //register shortcode
             add_shortcode( 'yith_woocommerce_ajax_search', array( $this, 'add_woo_ajax_search_shortcode' ) );
 

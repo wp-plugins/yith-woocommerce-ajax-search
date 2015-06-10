@@ -20,9 +20,9 @@
         // Browser globals
         factory(jQuery);
     }
+
 }(function ($) {
     'use strict';
-
     var
         utils = (function () {
             return {
@@ -49,7 +49,7 @@
             DOWN: 40
         };
 
-    function Autocomplete(el, options) {
+    function YithAutocomplete(el, options) {
         var noop = function () { },
             that = this,
             defaults = {
@@ -63,7 +63,7 @@
                 maxHeight: 300,
                 deferRequestBy: 0,
                 params: {},
-                formatResult: Autocomplete.formatResult,
+                formatResult: YithAutocomplete.formatResult,
                 delimiter: null,
                 zIndex: 9999,
                 type: 'GET',
@@ -115,17 +115,17 @@
         that.setOptions(options);
     }
 
-    Autocomplete.utils = utils;
+    YithAutocomplete.utils = utils;
 
-    $.Autocomplete = Autocomplete;
+    $.YithAutocomplete = YithAutocomplete;
 
-    Autocomplete.formatResult = function (suggestion, currentValue) {
+    YithAutocomplete.formatResult = function (suggestion, currentValue) {
         var pattern = '(' + utils.escapeRegExChars(currentValue) + ')';
-
         return suggestion.value.replace(new RegExp(pattern, 'gi'), '<strong>$1<\/strong>');
     };
 
-    Autocomplete.prototype = {
+    YithAutocomplete.prototype = {
+
         killerFn: null,
 
         initialize: function () {
@@ -145,7 +145,7 @@
                 }
             };
 
-            that.suggestionsContainer = Autocomplete.utils.createNode(options.containerClass);
+            that.suggestionsContainer = YithAutocomplete.utils.createNode(options.containerClass);
 
             container = $(that.suggestionsContainer);
 
@@ -507,14 +507,14 @@
                     type: options.type,
                     dataType: options.dataType
                 }).done(function (data) {
-                        var result;
-                        that.currentRequest = null;
-                        result = options.transformResult(data);
-                        that.processResponse(result, q, cacheKey);
-                        options.onSearchComplete.call(that.element, q, result.suggestions);
-                    }).fail(function (jqXHR, textStatus, errorThrown) {
-                        options.onSearchError.call(that.element, q, jqXHR, textStatus, errorThrown);
-                    });
+                    var result;
+                    that.currentRequest = null;
+                    result = options.transformResult(data);
+                    that.processResponse(result, q, cacheKey);
+                    options.onSearchComplete.call(that.element, q, result.suggestions);
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    options.onSearchError.call(that.element, q, jqXHR, textStatus, errorThrown);
+                });
             }
         },
 
@@ -826,9 +826,9 @@
             $(that.suggestionsContainer).remove();
         }
     };
-
+ 
     // Create chainable jQuery plugin:
-    $.fn.autocomplete = function (options, args) {
+    $.fn.yithautocomplete = function (options, args) {
         var dataKey = 'autocomplete';
         // If function invoked without argument return
         // instance of the first matched element:
@@ -849,7 +849,7 @@
                 if (instance && instance.dispose) {
                     instance.dispose();
                 }
-                instance = new Autocomplete(this, options);
+                instance = new YithAutocomplete(this, options);
                 inputElement.data(dataKey, instance);
             }
         });
