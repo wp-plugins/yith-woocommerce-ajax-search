@@ -8,8 +8,6 @@
  */
 
 if ( !defined( 'YITH_WCAS' ) ) { exit; } // Exit if accessed directly
-
-wp_enqueue_script('yith_wcas_jquery-autocomplete' );
 wp_enqueue_script('yith_wcas_frontend' );
 
 ?>

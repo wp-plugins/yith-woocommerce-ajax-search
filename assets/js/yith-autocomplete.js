@@ -20,6 +20,7 @@
         // Browser globals
         factory(jQuery);
     }
+
 }(function ($) {
     'use strict';
     var
@@ -48,7 +49,7 @@
             DOWN: 40
         };
 
-    function Autocomplete(el, options) {
+    function YithAutocomplete(el, options) {
         var noop = function () { },
             that = this,
             defaults = {
@@ -62,7 +63,7 @@
                 maxHeight: 300,
                 deferRequestBy: 0,
                 params: {},
-                formatResult: Autocomplete.formatResult,
+                formatResult: YithAutocomplete.formatResult,
                 delimiter: null,
                 zIndex: 9999,
                 type: 'GET',
@@ -114,17 +115,16 @@
         that.setOptions(options);
     }
 
-    Autocomplete.utils = utils;
+    YithAutocomplete.utils = utils;
 
-    $.Autocomplete = Autocomplete;
+    $.YithAutocomplete = YithAutocomplete;
 
-    Autocomplete.formatResult = function (suggestion, currentValue) {
+    YithAutocomplete.formatResult = function (suggestion, currentValue) {
         var pattern = '(' + utils.escapeRegExChars(currentValue) + ')';
-
         return suggestion.value.replace(new RegExp(pattern, 'gi'), '<strong>$1<\/strong>');
     };
 
-    Autocomplete.prototype = {
+    YithAutocomplete.prototype = {
 
         killerFn: null,
 
@@ -145,7 +145,7 @@
                 }
             };
 
-            that.suggestionsContainer = Autocomplete.utils.createNode(options.containerClass);
+            that.suggestionsContainer = YithAutocomplete.utils.createNode(options.containerClass);
 
             container = $(that.suggestionsContainer);
 
@@ -826,9 +826,9 @@
             $(that.suggestionsContainer).remove();
         }
     };
-
+ 
     // Create chainable jQuery plugin:
-    $.fn.autocomplete = function (options, args) {
+    $.fn.yithautocomplete = function (options, args) {
         var dataKey = 'autocomplete';
         // If function invoked without argument return
         // instance of the first matched element:
@@ -849,7 +849,7 @@
                 if (instance && instance.dispose) {
                     instance.dispose();
                 }
-                instance = new Autocomplete(this, options);
+                instance = new YithAutocomplete(this, options);
                 inputElement.data(dataKey, instance);
             }
         });

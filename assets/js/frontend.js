@@ -5,6 +5,7 @@
  * @package YITH WooCommerce Ajax Search
  * @version 1.1.1
  */
+
 jQuery(document).ready(function ($) {
     "use strict";
 
