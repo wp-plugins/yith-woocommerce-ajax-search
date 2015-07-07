@@ -101,7 +101,7 @@ function yith_ajax_search_constructor() {
         function yith_wcas_install_woocommerce_admin_notice() {
             ?>
             <div class="error">
-                <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
+                <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires WooCommerce in order to work.', 'yit' ); ?></p>
             </div>
         <?php
         }

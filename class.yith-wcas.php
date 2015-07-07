@@ -135,6 +135,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
                 'orderby'             => $ordering_args['orderby'],
                 'order'               => $ordering_args['order'],
                 'posts_per_page'      => apply_filters( 'yith_wcas_ajax_search_products_posts_per_page', get_option( 'yith_wcas_posts_per_page' ) ),
+                'suppress_filters'    => false,
                 'meta_query'          => array(
                     array(
                         'key'     => '_visibility',

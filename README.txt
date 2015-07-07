@@ -61,7 +61,10 @@ If you have created your own language pack, or have an update for an existing on
 2. The plugin at work displaying the ajax search results
 
 == Changelog ==
+= x.x.x =
+* Fixed: Called to WP_Widget construct
 
+* Fixed: Backward compatibility with Autocomplete function
 
 = 1.3.2 =
 

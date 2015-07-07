@@ -20,9 +20,8 @@ if( !class_exists( 'YITH_WCAS_Ajax_Search_Widget' ) ) {
          * constructor
          *
          * @access public
-         * @return void
          */
-        function YITH_WCAS_Ajax_Search_Widget() {
+        function __construct() {
 
             /* Widget variable settings. */
             $this->woo_widget_cssclass = 'woocommerce widget_product_search yith_woocommerce_ajax_search';
@@ -34,7 +33,7 @@ if( !class_exists( 'YITH_WCAS_Ajax_Search_Widget' ) ) {
             $widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
 
             /* Create the widget. */
-            $this->WP_Widget('yith_woocommerce_ajax_search', $this->woo_widget_name, $widget_ops);
+            parent::__construct('yith_woocommerce_ajax_search', $this->woo_widget_name, $widget_ops);
         }
 
 

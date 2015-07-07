@@ -24,7 +24,6 @@ jQuery(document).ready(function ($) {
     });
 
     if( el.length == 0 ) el = $('#yith-s');
-
     el.each(function () {
         var $t = $(this),
             append_to = ( typeof  $t.data('append-to') == 'undefined') ? $t.closest('.yith-ajaxsearchform-container') : $t.data('append-to');
@@ -34,7 +33,7 @@ jQuery(document).ready(function ($) {
             appendTo        : append_to,
             serviceUrl      : woocommerce_params.ajax_url + '?action=yith_ajax_search_products',
             onSearchStart   : function () {
-                $(this).css('background', 'url(' + loader_icon + ') no-repeat right center');
+                $t.css({'background-image': 'url(' + loader_icon + ')','background-repeat': 'no-repeat', 'background-position': 'center right'});
             },
             onSelect        : function (suggestion) {
                 if (suggestion.id != -1) {
@@ -42,7 +41,7 @@ jQuery(document).ready(function ($) {
                 }
             }  ,
             onSearchComplete: function () {
-                $t.css('background', 'transparent');
+                $t.css('background-image', 'none');
             }
         });
     });
