@@ -122,7 +122,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
         public function ajax_search_products() {
             global $woocommerce;
 
-            $search_keyword = esc_attr( $_REQUEST['query'] );
+            $search_keyword =  $_REQUEST['query'];
 
             $ordering_args = $woocommerce->query->get_catalog_ordering_args( 'title', 'asc' );
             $suggestions   = array();
@@ -154,6 +154,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
                         'terms'    => $_REQUEST['product_cat']
                     ) );
             }
+
 
             $products = get_posts( $args );
 

@@ -56,7 +56,9 @@ if( !class_exists( 'YITH_WCAS_Frontend' ) ) {
             wp_enqueue_style( 'yith_wcas_frontend', $css );
 
             wp_localize_script( 'yith_wcas_frontend', 'yith_wcas_params', array(
-                'loading' => YITH_WCAS_ASSETS_IMAGES_URL.'ajax-loader.gif'
+                'loading' => YITH_WCAS_ASSETS_IMAGES_URL.'ajax-loader.gif',
+                'ajax_url' => admin_url( 'admin-ajax.php' )
+
             ));
 
             wp_enqueue_script('yith_autocomplete' );

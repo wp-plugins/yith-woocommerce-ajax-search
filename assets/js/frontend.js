@@ -31,7 +31,8 @@ jQuery(document).ready(function ($) {
         el.yithautocomplete({
             minChars        : min_chars,
             appendTo        : append_to,
-            serviceUrl      : woocommerce_params.ajax_url + '?action=yith_ajax_search_products',
+            triggerSelectOnValidInput: false,
+            serviceUrl      : yith_wcas_params.ajax_url + '?action=yith_ajax_search_products',
             onSearchStart   : function () {
                 $t.css({'background-image': 'url(' + loader_icon + ')','background-repeat': 'no-repeat', 'background-position': 'center right'});
             },
