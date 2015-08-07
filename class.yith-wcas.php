@@ -164,7 +164,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
 
                     $suggestions[] = apply_filters( 'yith_wcas_suggestion', array(
                         'id'    => $product->id,
-                        'value' => $product->get_title(),
+                        'value' => strip_tags($product->get_title()),
                         'url'   => $product->get_permalink()
                     ), $product );
                 }
@@ -187,5 +187,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
             echo json_encode( $suggestions );
             die();
         }
+
+
     }
 }

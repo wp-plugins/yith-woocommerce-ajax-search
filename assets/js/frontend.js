@@ -24,11 +24,12 @@ jQuery(document).ready(function ($) {
     });
 
     if( el.length == 0 ) el = $('#yith-s');
+
     el.each(function () {
         var $t = $(this),
             append_to = ( typeof  $t.data('append-to') == 'undefined') ? $t.closest('.yith-ajaxsearchform-container') : $t.data('append-to');
 
-        el.yithautocomplete({
+        $t.yithautocomplete({
             minChars        : min_chars,
             appendTo        : append_to,
             triggerSelectOnValidInput: false,

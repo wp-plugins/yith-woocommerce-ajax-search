@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: ajax, search, woocommerce, products, themes, yit, e-commerce, shop, yith, ajax search, instant search, premium, yithemes, autocomplete, autosuggest, better search, category search, custom search, highlight terms, Live Search, Predictive Search, product search, relevant search, search highlight, search product, suggest, typeahead, WooCommerce Plugin, woocommerce product search, woocommerce search, wordpress ecommerce
 Requires at least: 3.5.1
 Tested up to: 4.2
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,11 @@ If you have created your own language pack, or have an update for an existing on
 2. The plugin at work displaying the ajax search results
 
 == Changelog ==
+
+
+= 1.3.5 =
+* Added: Support most search elements on a page
+
 = 1.3.4 =
 * Fixed: Support to WPML
 
