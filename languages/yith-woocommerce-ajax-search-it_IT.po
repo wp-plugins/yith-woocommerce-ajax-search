@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Ajax Search Premium\n"
-"POT-Creation-Date: 2015-07-20 12:50+0100\n"
-"PO-Revision-Date: 2015-07-20 13:06+0100\n"
+"POT-Creation-Date: 2015-09-18 11:22+0200\n"
+"PO-Revision-Date: 2015-09-18 11:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-KeywordsList: __;_e;_x\n"
-"X-Poedit-Basepath: ./\n"
+"X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
 
@@ -73,7 +73,7 @@ msgstr ""
 "YITH WooCommerce Ajax Search si è rinnovato con molte nuove opzioni "
 "disponibili, scopri <a href=\""
 
-#: ../class.yith-wcas.php:173
+#: ../class.yith-wcas.php:175
 msgid "No results"
 msgstr "Nessun risultato"
 
@@ -166,19 +166,91 @@ msgstr "Numero massimo di risultati"
 msgid "Maximum number of results showed within the autosuggest box."
 msgstr "Numero massimo di risultati da mostrare tra i suggerimenti automatici."
 
+#: ../templates/admin/premium.php:251 ../templates/admin/premium.php:299
+#, php-format
+msgid ""
+"Upgrade to the %1$spremium version%2$s%3$s of %1$sYITH WooCommerce Ajax "
+"Search%2$s to benefit from all features!"
+msgstr ""
+
+#: ../templates/admin/premium.php:253 ../templates/admin/premium.php:301
+#, php-format
+msgid "%1$sUPGRADE%2$s %3$sto the premium version%2$s"
+msgstr ""
+
+#: ../templates/admin/premium.php:259
+msgid "Premium Features"
+msgstr ""
+
+#: ../templates/admin/premium.php:261
+msgid "HOW TO CUSTOMIZE THE RESULTS OF THE AUTOCOMPLETE"
+msgstr ""
+
+#: ../templates/admin/premium.php:263
+msgid "RESULTS OF THE AUTOCOMPLETE"
+msgstr ""
+
+#: ../templates/admin/premium.php:268
+#, php-format
+msgid "Show %1$sthe image%2$s of the product (left or right aligned)"
+msgstr ""
+
+#: ../templates/admin/premium.php:269
+#, php-format
+msgid "Enable the %1$sprice visualization%2$s"
+msgstr ""
+
+#: ../templates/admin/premium.php:270
+#, php-format
+msgid "Show the %1$sproduct description%2$s"
+msgstr ""
+
+#: ../templates/admin/premium.php:271
+#, php-format
+msgid "Tell to the client if the product is %1$son discount or is featured%2$s"
+msgstr ""
+
+#: ../templates/admin/premium.php:279
+msgid "HOW TO CUSTOMIZE THE SEARCH OPTIONS"
+msgstr ""
+
+#: ../templates/admin/premium.php:283
+#, php-format
+msgid "%1$sExtend the research%2$s in the excerpt and in the content"
+msgstr ""
+
+#: ../templates/admin/premium.php:284
+#, php-format
+msgid "%1$sActivate%2$s the category search"
+msgstr ""
+
+#: ../templates/admin/premium.php:285
+#, php-format
+msgid "Configure the %1$stag%2$s search"
+msgstr ""
+
+#: ../templates/admin/premium.php:286
+#, php-format
+msgid "Search a product with an %1$sID%2$s"
+msgstr ""
+
+#: ../templates/admin/premium.php:292
+msgid "SEARCH OPTIONS"
+msgstr ""
+
 #: ../templates/yith-woocommerce-ajax-search.php:18
 msgid "Search for:"
 msgstr "Cerca:"
 
-#: ../widgets/class.yith-wcas-ajax-search.php:29
+#: ../widgets/class.yith-wcas-ajax-search.php:28
 msgid "An Ajax Search box for products only."
 msgstr "Un filtro di ricerca Ajax solo per i prodotti."
 
-#: ../widgets/class.yith-wcas-ajax-search.php:31
+#: ../widgets/class.yith-wcas-ajax-search.php:30
 msgid "YITH WooCommerce Ajax Product Search"
 msgstr "YITH WooCommerce Ajax Product Search"
 
-#: ../widgets/class.yith-wcas-ajax-search.php:90
+#: ../widgets/class.yith-wcas-ajax-search.php:89
 msgid "Title:"
 msgstr "Titolo:"
 

@@ -15,7 +15,7 @@ wp_enqueue_script('yith_wcas_frontend' );
 <div class="yith-ajaxsearchform-container">
     <form role="search" method="get" id="yith-ajaxsearchform" action="<?php echo esc_url( home_url( '/'  ) ) ?>">
         <div>
-            <label class="screen-reader-text" for="yith-s"><?php _e( 'Search for:', 'yit' ) ?></label>
+            <label class="screen-reader-text" for="yith-s"><?php _e( 'Search for:', 'yith-woocommerce-ajax-search' ) ?></label>
 
             <input type="search"
                    value="<?php echo get_search_query() ?>"

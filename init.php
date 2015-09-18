@@ -3,10 +3,10 @@
 * Plugin Name: YITH WooCommerce Ajax Search
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Ajax Search allows your users to search products in real time.
-* Version: 1.3.6
+* Version: 1.3.7
 * Author: Yithemes
 * Author URI: http://yithemes.com/
-* Text Domain: yit
+* Text Domain: yith-woocommerce-ajax-search
 * Domain Path: /languages/
 *
 * @author Yithemes
@@ -37,7 +37,7 @@ if ( defined( 'YITH_WCAS_PREMIUM' ) ) {
     function yith_wcas_install_free_admin_notice() {
         ?>
         <div class="error">
-            <p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Ajax Search while you are using the premium one.', 'yit' ); ?></p>
+            <p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Ajax Search while you are using the premium one.', 'yith-woocommerce-ajax-search' ); ?></p>
         </div>
     <?php
     }
@@ -59,7 +59,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 if ( defined( 'YITH_WCAS_VERSION' ) ){
     return;
 }else{
-    define( 'YITH_WCAS_VERSION', '1.3.6' );
+    define( 'YITH_WCAS_VERSION', '1.3.7' );
 }
 
 if ( ! defined( 'YITH_WCAS_FREE_INIT' ) ) {
@@ -101,7 +101,7 @@ function yith_ajax_search_constructor() {
         function yith_wcas_install_woocommerce_admin_notice() {
             ?>
             <div class="error">
-                <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires WooCommerce in order to work.', 'yit' ); ?></p>
+                <p><?php _e( 'YITH WooCommerce Ajax Search is enabled but not effective. It requires WooCommerce in order to work.', 'yith-woocommerce-ajax-search' ); ?></p>
             </div>
         <?php
         }
@@ -111,7 +111,7 @@ function yith_ajax_search_constructor() {
     }
 
 
-    load_plugin_textdomain( 'yit', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
+    load_plugin_textdomain( 'yith-woocommerce-ajax-search', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
 
     // Load required classes and functions
     require_once('functions.yith-wcas.php');

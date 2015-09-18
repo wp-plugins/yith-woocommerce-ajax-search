@@ -248,31 +248,27 @@
     <div class="section section-cta section-odd">
         <div class="landing-container upgrade">
             <div class="premium-cta">
-                <p>
-                    Upgrade to the <span class="highlight">premium version</span><br/>
-                    of <span class="highlight">YITH WooCommerce Ajax Search</span> to benefit from all features!
-                </p>
+                <p><?php echo sprintf (__('Upgrade to the %1$spremium version%2$s%3$s of %1$sYITH WooCommerce Ajax Search%2$s to benefit from all features!','yith-woocommerce-ajax-search'),'<span class="highlight">','</span>','<br/>');?></p>
                 <a href="<?php echo $yith_wcas->obj->get_premium_landing_uri() ?>" target="_blank" class="premium-cta-button button btn">
-                    <span class="highlight">UPGRADE</span>
-                    <span>to the premium version</span>
+                  <?php echo sprintf (__('%1$sUPGRADE%2$s %3$sto the premium version%2$s','yith-woocommerce-ajax-search'),'<span class="highlight">','</span>','<span>');?>
                 </a>
             </div>
         </div>
     </div>
     <div class="section section-even clear">
-        <h1>Premium Features</h1>
+        <h1><?php _e('Premium Features');?></h1>
         <div class="landing-container">
-            <h2>HOW TO CUSTOMIZE THE RESULTS OF THE AUTOCOMPLETE</h2>
+            <h2><?php _e('HOW TO CUSTOMIZE THE RESULTS OF THE AUTOCOMPLETE');?></h2>
             <div class="col-1">
-                <img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>01.jpg" alt="01" style="margin-top: -18px" />
+                <img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>01.jpg" alt="<?php _e('RESULTS OF THE AUTOCOMPLETE');?>" style="margin-top: -18px" />
             </div>
             <div class="col-2">
                 <div class="section-title">
                     <ul>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-one.png" alt="1"/><span>Show <b>the image</b> of the product (left or right aligned))</span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-two.png" alt="2"/><span>Enable the <b>price visualization</b></span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-three.png" alt="3"/><span>Show the <b>product description</b></span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-fourth.png" alt="3"/><span>Tell to the client if the product is on discount or is featured </span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-one.png" alt="1"/><span><?php echo sprintf (__('Show %1$sthe image%2$s of the product (left or right aligned)','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-two.png" alt="2"/><span><?php echo sprintf (__('Enable the %1$sprice visualization%2$s','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-three.png" alt="3"/><span><?php echo sprintf (__('Show the %1$sproduct description%2$s','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-fourth.png" alt="4"/><span><?php echo sprintf (__('Tell to the client if the product is %1$son discount or is featured%2$s','yith-woocommerce-ajax-search'),'<b>','</b>');?> </span></li>
                     </ul>
                 </div>
             </div>
@@ -280,33 +276,29 @@
     </div>
     <div class="section clear">
         <div class="landing-container">
-            <h2>HOW TO CUSTOMIZE THE SEARCH OPTIONS</h2>
+            <h2><?php _e('HOW TO CUSTOMIZE THE SEARCH OPTIONS');?></h2>
             <div class="col-2">
                 <div class="section-title">
                     <ul>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-five.png" alt="5"/><span>Extend the research in the excerpt and in the content</li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-six.png" alt="6"/><span>Activate the category search</span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-seven.png" alt="7"/><span>Configure the <b>tag</b> search</span></li>
-                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-eight.png" alt="8"/><span>Search a product with an <b>ID</b></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-five.png" alt="5"/><span><?php echo sprintf (__('%1$sExtend the research%2$s in the excerpt and in the content','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-six.png" alt="6"/><span><?php echo sprintf (__('%1$sActivate%2$s the category search','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-seven.png" alt="7"/><span><?php echo sprintf (__('Configure the %1$stag%2$s search','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
+                        <li><img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>number-eight.png" alt="8"/><span><?php echo sprintf (__('Search a product with an %1$sID%2$s','yith-woocommerce-ajax-search'),'<b>','</b>');?></span></li>
 
                     </ul>
                 </div>
             </div>
             <div class="col-1">
-                <img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>02.png" alt="02" />
+                <img src="<?php echo YITH_WCAS_ASSETS_IMAGES_URL ?>02.png" alt="<?php _e('SEARCH OPTIONS');?>" />
             </div>
         </div>
     </div>
     <div class="section section-cta section-odd">
         <div class="landing-container upgrade last">
             <div class="premium-cta">
-                <p>
-                    Upgrade to the <span class="highlight">premium version</span><br/>
-                    of <span class="highlight">YITH WooCommerce Ajax Search</span> to benefit from all features!
-                </p>
+                <p><?php echo sprintf (__('Upgrade to the %1$spremium version%2$s%3$s of %1$sYITH WooCommerce Ajax Search%2$s to benefit from all features!','yith-woocommerce-ajax-search'),'<span class="highlight">','</span>','<br/>');?></p>
                 <a href="<?php echo $yith_wcas->obj->get_premium_landing_uri() ?>" target="_blank" class="premium-cta-button button btn">
-                    <span class="highlight">UPGRADE</span>
-                    <span>to the premium version</span>
+                    <?php echo sprintf (__('%1$sUPGRADE%2$s %3$sto the premium version%2$s','yith-woocommerce-ajax-search'),'<span class="highlight">','</span>','<span>');?>
                 </a>
             </div>
         </div>

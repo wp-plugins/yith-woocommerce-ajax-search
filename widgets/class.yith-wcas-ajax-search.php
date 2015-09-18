@@ -25,9 +25,9 @@ if( !class_exists( 'YITH_WCAS_Ajax_Search_Widget' ) ) {
 
             /* Widget variable settings. */
             $this->woo_widget_cssclass = 'woocommerce widget_product_search yith_woocommerce_ajax_search';
-            $this->woo_widget_description = __( 'An Ajax Search box for products only.', 'yit' );
+            $this->woo_widget_description = __( 'An Ajax Search box for products only.', 'yith-woocommerce-ajax-search' );
             $this->woo_widget_idbase = 'yith_woocommerce_ajax_search';
-            $this->woo_widget_name = __( 'YITH WooCommerce Ajax Product Search', 'yit' );
+            $this->woo_widget_name = __( 'YITH WooCommerce Ajax Product Search', 'yith-woocommerce-ajax-search' );
 
             /* Widget settings. */
             $widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );

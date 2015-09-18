@@ -18,20 +18,20 @@ return array(
 	'settings' => array(
 
         'section_general_settings_videobox'         => array(
-          'name' => __( 'Upgrade to the PREMIUM VERSION', 'yit' ),
+          'name' => __( 'Upgrade to the PREMIUM VERSION', 'yith-woocommerce-ajax-search' ),
           'type' => 'videobox',
           'default' => array(
-              'plugin_name'        => __( 'YITH WooCommerce Ajax Search', 'yit' ),
-              'title_first_column' => __( 'Discover the Advanced Features', 'yit' ),
+              'plugin_name'        => __( 'YITH WooCommerce Ajax Search', 'yith-woocommerce-ajax-search' ),
+              'title_first_column' => __( 'Discover the Advanced Features', 'yith-woocommerce-ajax-search' ),
               'description_first_column' => __('Upgrade to the PREMIUM VERSION
-of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yit'),
+of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yith-woocommerce-ajax-search'),
               'video' => array(
                   'video_id'           => '118917627',
                   'video_image_url'    =>  YITH_WCAS_ASSETS_IMAGES_URL.'ajax-search-premium.jpg',
-                  'video_description'  => __( 'YITH WooCommerce Ajax Search', 'yit' ),
+                  'video_description'  => __( 'YITH WooCommerce Ajax Search', 'yith-woocommerce-ajax-search' ),
               ),
-              'title_second_column' => __( 'Get Support and Pro Features', 'yit' ),
-              'description_second_column' => __('By purchasing the premium version of the plugin, you will take advantage of the advanced features of the product and you will get one year of free updates and support through our platform available 24h/24.', 'yit'),
+              'title_second_column' => __( 'Get Support and Pro Features', 'yith-woocommerce-ajax-search' ),
+              'description_second_column' => __('By purchasing the premium version of the plugin, you will take advantage of the advanced features of the product and you will get one year of free updates and support through our platform available 24h/24.', 'yith-woocommerce-ajax-search'),
               'button' => array(
                   'href' => $yith_wcas->obj->get_premium_landing_uri(),
                   'title' => 'Get Support and Pro Features'
@@ -41,7 +41,7 @@ of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yit'),
       ),
 
 		'section_general_settings'          => array(
-			'name' => __( 'General settings', 'yit' ),
+			'name' => __( 'General settings', 'yith-woocommerce-ajax-search' ),
 			'type' => 'title',
 			'custom_attributes' => array(
 				'disabled' => 'disabled'
@@ -50,24 +50,24 @@ of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yit'),
 		),
 
         'search_input_label' => array(
-            'name' => __( 'Search input label', 'yit' ),
+            'name' => __( 'Search input label', 'yith-woocommerce-ajax-search' ),
             'type'    => 'text',
-            'desc' => __( 'Label for Search input field.', 'yit' ),
+            'desc' => __( 'Label for Search input field.', 'yith-woocommerce-ajax-search' ),
             'id'      => 'yith_wcas_search_input_label',
-            'default' => __( 'Search for products', 'yit' ),
+            'default' => __( 'Search for products', 'yith-woocommerce-ajax-search' ),
         ),
 
         'search_submit_label' => array(
-            'name' => __( 'Search submit label', 'yit' ),
+            'name' => __( 'Search submit label', 'yith-woocommerce-ajax-search' ),
             'type'    => 'text',
-            'desc' => __( 'Label for Search input field.', 'yit' ),
+            'desc' => __( 'Label for Search input field.', 'yith-woocommerce-ajax-search' ),
             'id'      => 'yith_wcas_search_submit_label',
-            'default' => __( 'Search', 'yit' )
+            'default' => __( 'Search', 'yith-woocommerce-ajax-search' )
         ),
 
         'trigger_min_chars' => array(
-            'name' => __( 'Minimum number of characters', 'yit' ),
-            'desc' => __( 'Minimum number of characters required to trigger autosuggest.', 'yit' ),
+            'name' => __( 'Minimum number of characters', 'yith-woocommerce-ajax-search' ),
+            'desc' => __( 'Minimum number of characters required to trigger autosuggest.', 'yith-woocommerce-ajax-search' ),
             'id'   => 'yith_wcas_min_chars',
             'default' => '3',
             'css' 		=> 'width:50px;',
@@ -80,8 +80,8 @@ of YITH WOOCOMMERCE AJAX SEARCH to benefit from all features!', 'yit'),
         ),
 
         'trigger_max_result_num' => array(
-            'name' => __( 'Maximum number of results', 'yit' ),
-            'desc' => __( 'Maximum number of results showed within the autosuggest box.', 'yit' ),
+            'name' => __( 'Maximum number of results', 'yith-woocommerce-ajax-search' ),
+            'desc' => __( 'Maximum number of results showed within the autosuggest box.', 'yith-woocommerce-ajax-search' ),
             'id'   => 'yith_wcas_posts_per_page',
             'default' => '3',
             'css' 		=> 'width:50px;',

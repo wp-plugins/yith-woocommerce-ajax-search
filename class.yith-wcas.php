@@ -172,7 +172,7 @@ if ( !class_exists( 'YITH_WCAS' ) ) {
             else {
                 $suggestions[] = array(
                     'id'    => - 1,
-                    'value' => __( 'No results', 'yit' ),
+                    'value' => __( 'No results', 'yith-woocommerce-ajax-search' ),
                     'url'   => '',
                 );
             }
