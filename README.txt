@@ -114,8 +114,9 @@ Recently YITH WooCommerce Ajax Search has been selected to be included in the "t
 In order to import correctly the plugin strings in the new system, we had to change the text domain form 'yit' to 'yith-woocommerce-ajax-search'.
 Once the plugin will be imported in the translate.wordpress.org system, the translations of other languages will be downloaded directly from WordPress, without using any .po and .mo files. Moreover, users will be able to participate in a more direct way to plugin translations, suggesting texts in their languages in the dedicated tab on translate.wordpress.org.
 During this transition step, .po and .mo files will be used as always, but in order to be recognized by WordPress, they will need to have a new nomenclature, renaming them in:
-yith-woocommerce-ajax-search-<WORDPRESS LOCALE>.po
-yith-woocommerce-ajax-search-<WORDPRESS LOCALE >.mo
+
+* yith-woocommerce-ajax-search-[WORDPRESS LOCALE].po
+* yith-woocommerce-ajax-search-[WORDPRESS LOCALE].mo
 
 == Suggestions ==
 If you have any suggestions for improving YITH WooCommerce Ajax Search, you can [write to us](mailto:plugins@yithemes.com "Your Inspiration Themes"), and contribute in making your YITH WooCommerce Ajax Search more and more performing.
