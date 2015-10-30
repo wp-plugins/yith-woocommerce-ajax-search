@@ -3,7 +3,7 @@
 * Plugin Name: YITH WooCommerce Ajax Search
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Ajax Search allows your users to search products in real time.
-* Version: 1.3.7
+* Version: 1.3.8
 * Author: Yithemes
 * Author URI: http://yithemes.com/
 * Text Domain: yith-woocommerce-ajax-search
@@ -31,6 +31,15 @@
 */
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
+if ( ! defined( 'YITH_WCAS_DIR' ) ) {
+    define( 'YITH_WCAS_DIR', plugin_dir_path( __FILE__ )  );
+}
+
+/* Plugin Framework Version Check */
+if( ! function_exists( 'yit_maybe_plugin_fw_loader' ) && file_exists( YITH_WCAS_DIR . 'plugin-fw/init.php' ) ) {
+    require_once( YITH_WCAS_DIR . 'plugin-fw/init.php' );
+}
+yit_maybe_plugin_fw_loader( YITH_WCAS_DIR  );
 
 
 if ( defined( 'YITH_WCAS_PREMIUM' ) ) {
@@ -59,7 +68,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 if ( defined( 'YITH_WCAS_VERSION' ) ){
     return;
 }else{
-    define( 'YITH_WCAS_VERSION', '1.3.7' );
+    define( 'YITH_WCAS_VERSION', '1.3.8' );
 }
 
 if ( ! defined( 'YITH_WCAS_FREE_INIT' ) ) {
@@ -78,9 +87,7 @@ if ( ! defined( 'YITH_WCAS_URL' ) ) {
     define( 'YITH_WCAS_URL', plugin_dir_url( __FILE__ ) );
 }
 
-if ( ! defined( 'YITH_WCAS_DIR' ) ) {
-    define( 'YITH_WCAS_DIR', plugin_dir_path( __FILE__ )  );
-}
+
 
 if ( ! defined( 'YITH_WCAS_TEMPLATE_PATH' ) ) {
     define( 'YITH_WCAS_TEMPLATE_PATH', YITH_WCAS_DIR . 'templates' );

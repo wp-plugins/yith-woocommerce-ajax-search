@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Ajax Search Premium\n"
-"POT-Creation-Date: 2015-09-18 11:22+0200\n"
-"PO-Revision-Date: 2015-09-18 11:22+0200\n"
+"POT-Creation-Date: 2015-09-25 12:30+0200\n"
+"PO-Revision-Date: 2015-09-25 12:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: it_IT\n"
@@ -172,71 +172,75 @@ msgid ""
 "Upgrade to the %1$spremium version%2$s%3$s of %1$sYITH WooCommerce Ajax "
 "Search%2$s to benefit from all features!"
 msgstr ""
+"Aggiorna alla %1$spremium versione%2$s %3$s di%1$sYITH WooCommerce Ajax "
+"Search%2$s per usufruire di tutte le sue funzionalità!"
 
 #: ../templates/admin/premium.php:253 ../templates/admin/premium.php:301
 #, php-format
 msgid "%1$sUPGRADE%2$s %3$sto the premium version%2$s"
-msgstr ""
+msgstr "%1$sAGGIORNA%2$s %3$salla versione premium%2$s "
 
 #: ../templates/admin/premium.php:259
 msgid "Premium Features"
-msgstr ""
+msgstr "Funzionalità premium"
 
 #: ../templates/admin/premium.php:261
 msgid "HOW TO CUSTOMIZE THE RESULTS OF THE AUTOCOMPLETE"
-msgstr ""
+msgstr "Come personalizzare i risultati del riempimento automatico"
 
 #: ../templates/admin/premium.php:263
 msgid "RESULTS OF THE AUTOCOMPLETE"
-msgstr ""
+msgstr "Risultati del completamento automatico"
 
 #: ../templates/admin/premium.php:268
 #, php-format
 msgid "Show %1$sthe image%2$s of the product (left or right aligned)"
-msgstr ""
+msgstr "Mostra %1$sl'immagine%2$s del prodotto (a destra o sinistra)"
 
 #: ../templates/admin/premium.php:269
 #, php-format
 msgid "Enable the %1$sprice visualization%2$s"
-msgstr ""
+msgstr "Abilita %1$svisualizzazione prezzo%2$s"
 
 #: ../templates/admin/premium.php:270
 #, php-format
 msgid "Show the %1$sproduct description%2$s"
-msgstr ""
+msgstr "Mostra %1$sdescrizione prodotto%2$s"
 
 #: ../templates/admin/premium.php:271
 #, php-format
 msgid "Tell to the client if the product is %1$son discount or is featured%2$s"
-msgstr ""
+msgstr "Informa l'utente se il prodotto è %1$sin saldo o in evidenza%2$s"
 
 #: ../templates/admin/premium.php:279
 msgid "HOW TO CUSTOMIZE THE SEARCH OPTIONS"
-msgstr ""
+msgstr "Come personalizzare le opzioni di ricerca"
 
 #: ../templates/admin/premium.php:283
 #, php-format
 msgid "%1$sExtend the research%2$s in the excerpt and in the content"
 msgstr ""
+"%1$sEstendi le funzionalità di ricerca%2$s anche all'interno del riassunto "
+"prodotto e del contenuto"
 
 #: ../templates/admin/premium.php:284
 #, php-format
 msgid "%1$sActivate%2$s the category search"
-msgstr ""
+msgstr "%1$sAbilita%2$s la ricerca per categoria"
 
 #: ../templates/admin/premium.php:285
 #, php-format
 msgid "Configure the %1$stag%2$s search"
-msgstr ""
+msgstr "Configura la ricerca per %1$stag%2$s"
 
 #: ../templates/admin/premium.php:286
 #, php-format
 msgid "Search a product with an %1$sID%2$s"
-msgstr ""
+msgstr "Cerca un prodotto utilizzando il suo %1$sID%2$s"
 
 #: ../templates/admin/premium.php:292
 msgid "SEARCH OPTIONS"
-msgstr ""
+msgstr "OPZIONI DI RICERCA"
 
 #: ../templates/yith-woocommerce-ajax-search.php:18
 msgid "Search for:"
